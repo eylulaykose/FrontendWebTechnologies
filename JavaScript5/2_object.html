@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width="device-width", initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let person = {
+      name:"Veli",
+      surname :"Korkmaz",
+      bday:1977,
+      gender : "male",
+      display(){
+          alert(`${person.name} ${person.surname}`);
+      }
+    }
+
+    alert(person.bday);
+    alert(person["bday"]);
+    person.display();
+
+  </script>
+</body>
+</html>

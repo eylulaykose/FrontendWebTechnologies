@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript" src="js/people.js"></script>
+</head>
+<body>
+  <script>
+    ctis255 = new Course("ctis255","Front Web Technologies");    
+    ctis255.name ='Frontend Web Technologies';
+    st = new Student("veli","korkmaz",1977,21212121,"ctis");    
+    pr = new Person("Ali","Candan",1977);
+    console.log("Person name:"+pr.name); //private member cannot access aoutside of class
+    console.log("Person name:"+pr.getName());
+
+    console.log("Number of course: "+Course.getNumberOfCourse());
+    console.log("Number of course: "+Course.numberOfCourse);    
+
+    if(st instanceof Student)
+      console.log("Student")
+    if(st instanceof Person)
+      console.log("Person");
+    
+    if(st instanceof Course)
+      console.log("Course");
+    else
+    console.log("Not a Course");
+
+    if("surname" in st)
+      console.log("Surname "+st.surname);
+
+    if("credit" in st)
+      console.log("Credit "+st.credit);
+    else
+      console.log("No credit");
+
+    let allKeys = Object.keys(st);
+    console.log(allKeys.join());
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Course{
+      constructor(code, name, credit){
+        this.code = code;
+        this.name = name;
+        this.credit = credit;
+      }
+      display(){
+        return this.code+"-"+this.name+", "+this.credit+"<br>";
+      }
+    }
+    class Person{
+      constructor(name, surname, bday){
+        this.name = name;
+        this.surname = surname;
+        this.bday = bday;
+      }
+      display(){
+        return this.name+" "+this.surname+" "+this.bday+" ";
+      }
+    }
+    class Student extends Person{
+      constructor(name, surname, bday, id, dept){
+        super(name, surname, bday);
+        this.id = id;
+        this.dept = dept;
+        this.courses=[];
+      }
+      addCourse(course){
+        this.courses.push(course);
+      }
+      display(){
+         let out = super.display()+this.id+" "+this.dept+"<br>";         
+         for(let c of this.courses)
+            out +=c.display();
+         return out;
+      }
+    }
+
+    ctis255 = new Course("ctis255","Frontend Web Technologies");
+    ctis151 = new Course("ctis151","Introduction to Programming");
+    eng101 = new Course("eng101","English and composition");
+
+    st1 = new Student("veli","korkmaz",1977,21212121,"ctis");
+    st1.addCourse(ctis255);
+    st1.addCourse(ctis151);
+    st1.addCourse(eng101);
+    console.log(st1.display());
+  </script>
+  
+</body>
+</html>
