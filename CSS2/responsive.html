@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <style>
+      /* Mobile First Design */
+      body { font-family: arial ;}
+      header h1 { color: red ;}  /* sp : 2 */
+      header h2 { display:none ; } /* sp : 2 */
+      header h2:first-of-type { display: block ;} /* sp: 012 */
+
+      nav ul { list-style-type: none; padding: 0 ;}
+      nav ul li {
+          background-color: #FCC ;
+          border: 1px solid #DAA ;
+          margin-top: 10px;
+          padding: 10px;
+          text-align: center;
+      }
+      nav ul li:hover { background-color: #F99 ;}
+
+      nav ul li:last-of-type { display: none ; }
+
+      /* Tablet View */
+      @media (min-width: 640px) {
+          header h1 { color : blue ; } /* sp: 2 */
+          header h2:first-of-type { display: none ;} /* sp: 012 */
+          header h2:nth-of-type(2) { display: block ;}
+
+          nav ul { text-align: center ;}
+          nav ul li {
+              display: inline-block ; 
+              width: 20% ; 
+          }
+      }
+
+      /* Desktop View */
+      @media (min-width: 960px) {
+        header h1 { color : green ; } /* sp: 2 */
+        header h2:nth-of-type(2) { display: none ;}
+        header h2:last-of-type { display: block ;}
+        nav ul li:last-of-type { display: inline-block}
+      }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Design</h1>
+        <h2>Small Display Devices (Smartphones)</h2>
+        <h2>Tablet View</h2>
+        <h2>Desktop Version</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li>Sign In</li>
+            <li>Sign Up</li>
+            <li>Logout</li>
+            <li>About</li>
+        </ul>
+    </nav>
+</body>
+</html>

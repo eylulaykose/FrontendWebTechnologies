@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body { 
+          margin:0; padding:0; 
+          /* make document big to add a vertical scroll bar */
+          /* to test fixed positioning system */
+          height: 2000px; 
+
+          
+    }
+    body::-webkit-scrollbar{
+        background-color:orangered;
+        height: 20px;
+    }
+    body::-webkit-scrollbar-thumb {
+        border: 5px solid transparent;
+        border-radius: 100px;
+        background-color: #8070d4;
+        background-clip: content-box;
+    }
+    h1, h3, footer {
+        border:1px solid black;
+        background: #F99;
+        padding: 5px;
+    }
+
+    /* set the location of element relative to its static position */
+    .relative {
+        background: #99F;
+        position: relative;
+        top: -35px; left: 50px; /* shift relative to its static position */
+        z-index: -1 ; /* send back */
+    }
+
+    /* fix the element's position relative to viewport (window) */
+    /* the element is removed from the document flow */
+    .fixed {
+        background: #9F9;
+        border: 6px dashed #7C7;
+        padding: 10px;
+        position: fixed ;
+        bottom:0; /* y coordinate */
+        left:0;  /* x coordinate */
+        margin: 0 ;
+        /* to fit exactly into viewport, method #1 */
+        /* box-sizing: content-box ; /* default value */
+        /* actual width = left border + left padding + width + right padding + right border */
+        /* excessive width = 6 + 10 + 10 + 6 = 32 */
+        /* width: calc(100% - 32px) ;  */
+
+        /* method #2 */
+        box-sizing: border-box;
+        width: 100%; 
+    }
+    /* set the position relative to its offset parent */
+    /* offset parent is the closest ancestor positioned by non-static method (relative, fixed, absolute) or root element (html)*/
+    .absolute {
+        background: #FF9;
+        position: absolute;
+        top:0;
+        right: 0; left:0; /* method #3: another technique to fit into viewport */
+        margin:0 ;
+        padding: 10px;
+        text-align: center;
+        opacity: 0.9;
+        z-index: 1 ; /* make sure that the element is in front */
+    }
+
+    #parent {
+        background: url(bg.png) ; /* game background */
+        border:1px solid #77C;
+        width: 430px;  /* dimension of background is 430X260 */
+        height: 260px;
+        margin: 20px auto; /* center parent box */
+        position: relative; /* to make "offset parent" */
+        overflow: hidden; /* clip overflowing area (bird image in this example) */
+    }
+
+    #parent img {
+        position: absolute; /* place images relative to offset parent (#parent) */
+        transition: all ease 1s; /* smooth animation */
+    }
+
+    /* Place Mario */
+    #mario {
+        top: 110px; 
+        left: 20px ;
+    }
+
+    /* Place Bird */
+    #bird {
+        top: 100px;
+        left: 220px;
+    }
+
+    /* fancy animation with CSS */
+    #parent:hover #mario { left: 300px;}
+    #parent:hover #bird { 
+        top: -60px; 
+        left: 350px;
+        opacity: 0 ; /* fade out */
+        transform: scale(3) rotate(360deg);    
+    }
+
+
+    </style>
+</head>
+<body>
+    <h1>CSS Position</h1>
+    <h3 class="static">Static</h3>
+    <h3 class="relative">Relative</h3>
+    <h3 class="fixed">Fixed</h3>
+    <h3 class="absolute">Absolute</h3>
+    <div id="parent">
+        <img src="mario.png" id="mario">
+        <img src="bird.png" id="bird">
+    </div>
+    <footer>Scroll Down the page</footer>
+</body>
+</html>

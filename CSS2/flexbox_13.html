@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Basics</title>
+    <style>
+      div { border:1px solid black; padding: 5px;}
+      .main {
+            display: flex ;
+            flex-direction: row ; /* row-reverse, column, column-reverse */
+            justify-content: space-between; /* flex-start, flex-end, center, space-around ... */
+            align-items: stretch; /* flex-start, flex-end, center, stretch ... */
+            width: 300px;
+            margin: 0 auto ; /* center container */
+      }
+      .left { flex:3; order:3; margin-left: 5px;}
+      .middle { flex:4; order:1; height: 150px;}
+      .right { flex:1; order:2; margin-left: 5px;}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="left">BOX 1</div>
+        <div class="middle">BOX 2</div>
+        <div class="right">BOX 3</div>
+    </div>
+</body>
+</html>

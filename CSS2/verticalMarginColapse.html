@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background:url(images/grid.png) 5px 5px;
+      margin: 0;
+      padding: 5px;      
+      
+    }
+    div { width: 200px; height: 150px; border: 1px soldi black;}
+    #div1{ margin-bottom: 30px;background-color: #FAA;}
+    #div2{ margin-top: 20px; background-color: #AFA;}
+
+    #divParent{ margin-top: 30px; background-color:rgb(255,200,200,0.6);}
+    #divChild{ margin-top: 0; padding: 0; width: 150px; height: 100px; background-color:#AFA; border: 1px solid black;}
+
+  </style>
+</head>
+<body>  
+  <div id="div1"></div>
+  <div id="div2"></div>
+
+  <div id="divParent">
+    content
+    <div id="divChild">child content</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1{
+      width: 300px;
+      background-color: #0066FF;
+      /*
+      0 for top&bottom, auto for left&right: used to center block level elements
+      */
+      margin: 0 auto;   
+         
+    }
+    p#p1{
+      width: 300px;
+      background-color: #FF3366;
+      /* margin: top, right, bottom, left respectvely */
+      margin:20px 15px 45px 35px;
+      /* 
+      margin for block level elements for all sides are valid
+      for inline level elements only right and left margins are applicable
+      */
+    }
+    p#p2{
+      width: 300px;
+      background-color: #FF3366;
+      /* margin: top, right, bottom, left respectvely */
+      margin-top:20px;
+      margin-right: 15px;
+      margin-bottom: 45px;
+      margin-left: 35px;
+      /* 
+      margin for block level elements for all sides are valid
+      for inline level elements only right and left margins are applicable
+      */
+    }
+  </style>
+</head>
+<body>
+  <h1>Heading</h1>
+  <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, vel.</p>
+  <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, vel.</p>
+</body>
+</html>

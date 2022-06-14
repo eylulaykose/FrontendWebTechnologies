@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+       /* Mobile First Design */
+
+       /* Mobile */
+       div { border:1px solid black; padding: 5px; text-align: center;}
+       .c3 div:first-of-type { display: none; } /* don't show Box 3 */
+
+       .c1 { width: 90%; margin: 0 auto;}
+
+       /* Tablet */
+       @media (min-width: 640px) {
+           .c3 div:first-of-type { display: block; } /* show Box 3 */
+           .c3 { display: flex; }
+           .c3 div { flex: 1; }
+       }
+
+       /* Desktop */
+       @media (min-width: 960px) {
+           .c1 { display: flex ;}
+           .c1 > div:first-of-type { flex: 1; }
+           .c2 { flex: 4;}
+       }
+
+    </style>
+</head>
+<body>
+    <div class="c1">
+        <div>BOX 1</div>
+        <div class="c2">
+            <div>BOX 2</div>
+            <div class="c3">
+                <div>BOX 3</div>
+                <div>BOX 4</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
