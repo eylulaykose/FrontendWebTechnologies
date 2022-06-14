@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>  
+  <p onmouseover="display(this, 'mouseover')" onmouseout="display(this, 'mouseout')">MOUSE<br>
+  </p>
+  <p id="mo">over</p>
+
+  <div id="result"></div>
+  
+  <script>
+      var pWithMoId = document.getElementById("mo");
+           
+      pWithMoId.onmouseover = function(event) {
+            let target = event.target;
+            target.style.background = 'white';  
+            target.innerHTML = "over";
+      };
+
+      pWithMoId.onmouseout = function(event) {
+            let target = event.target;
+            target.style.background = 'blue';  
+            target.innerHTML = "out";          
+      };
+      
+      function display(htmlElement, msg){
+        htmlElement.innerHTML = msg;             
+      }          
+	  </script>
+</body>
+</html>

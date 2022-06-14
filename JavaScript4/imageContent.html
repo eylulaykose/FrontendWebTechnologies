@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="showImage(-1)">Prev</button>
+  <button onclick="showImage(1)">Next</button>
+  <br>
+  <img src="images/fall.jpg" id="season">
+  
+  <script>
+    var images = ["fall.jpg","spring.jpg","summer.jpg","winter.jpg"];
+    var counter=0;
+    function showImage(inc){           
+      counter +=inc;      
+      if(counter < 0) counter = 0;
+      if(counter >= images.length) 
+        counter= images.length-1;      
+      console.log("Counter", counter);
+      var imgObj = document.getElementById("season");
+      imgObj.src="images/"+images[counter];
+      
+    }
+  </script>
+</body>
+</html>

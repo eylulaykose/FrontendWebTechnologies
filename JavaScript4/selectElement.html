@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div.action{background-color: orange;width: 100px; padding: 5px; text-align: center; margin: 5px; display: inline-block;}
+  </style>
+  <script>
+
+  </script>
+</head>
+<body>
+  <div> 
+    <h1 onclick="changeTextClolor(this, 'yellow')">Lorem, ipsum.</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eligendi voluptatum, in cupiditate blanditiis delectus ducimus assumenda saepe libero est doloribus exercitationem quis incidunt, unde odio nesciunt vel quia nemo! <a href="">link</a></p>
+  </div>
+  <p id="prg2" onclick="changeTextClolor(this, 'red')">
+    Lorem ipsum dolor <spam>sit</spam>, amet consectetur adipisicing elit. Dolor, facilis.
+  </p>
+  <input type="text" name="message">
+  <br>
+
+  <div class="action" onclick="changeBackground1()">Background1</div>
+  <div class="action" onclick="changeBackground2()">Background2</div>
+  <div class="action" onclick="changeBackground3()">Background3</div>  
+  <div class="action" onclick="changeBackground4()">Background4</div>
+  
+  
+</body>
+</html>
+<script>
+  function changeBackground1(){
+    allParagraphs = document.getElementsByTagName("p");//returns an array that contains all elements whose tag is tag_name.
+    for(i=0; i<allParagraphs.length; i++){
+        allParagraphs[i].style.backgroundColor="orange";
+        //allParagraphs[i].style.borderBottom="1px solid blue";
+        allParagraphs[i].style["border-bottom"]="1px solid blue";
+        allParagraphs[i].style.fontSize="28pt";
+    }
+  }
+  function changeBackground2(){
+    allParagraphs = document.querySelectorAll("p");//returns all the objects matching the selector in an array.
+    for(i=0; i<allParagraphs.length; i++)
+        allParagraphs[i].style.backgroundColor="blue";
+  }
+  function changeBackground3(){
+    firstParagraphs = document.querySelector("p"); //returns the first object matching the selector    
+    firstParagraphs.style.backgroundColor="yellow";
+  }
+  function changeBackground4(){
+    allhtmlElementsWithActionClass = document.getElementsByClassName("action"); //returns the first object matching the selector 
+    for(i=0; i<allhtmlElementsWithActionClass.length; i++)
+        allhtmlElementsWithActionClass[i].style.backgroundColor="red";
+   
+    formElementsWithNameMessage = document.getElementsByName("message");  //Get all elements with the name "message":
+    formElementsWithNameMessage[0].style.backgroundColor = "black";
+    formElementsWithNameMessage[0].style.color = "white";
+  }
+  function changeTextClolor(htmlElement, clr){
+    htmlElement.style.backgroundColor = clr;   
+  }
+</script>

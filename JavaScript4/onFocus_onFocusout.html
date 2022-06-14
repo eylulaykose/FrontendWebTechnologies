@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="message">
+  <input type="text" 
+    onfocus="this.style.backgroundColor='blue'"    
+    onfocusout="this.style.backgroundColor='orange'"
+    >
+  
+  <script>
+    let textBox = document.getElementById('message');
+    textBox.addEventListener('focus', (event) => {
+      document.getElementById("message").style.backgroundColor = "yellow";      
+
+    });
+    textBox.addEventListener('focusout', (event) => {
+      document.getElementById("message").style.backgroundColor = "white";
+
+    });       
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="startButton">Start</button>
+  <button id="removeButton">Romove Click Event</button>
+  <p>Lorem ipsum dolor sit amet<br></p>
+  
+  <script>
+
+      var someEventHander=function(){     
+        alert("Button Clicked")  
+        count++;
+        document.querySelector("p").innerHTML += "Button Start Clicked"+count+"<br>";      
+      }
+      var count=0;
+      var btnStart = document.getElementById("startButton");
+      var btnRemove = document.getElementById("removeButton");
+
+      btnStart.addEventListener("click",someEventHander);
+
+      btnRemove.addEventListener("click",function(){
+        document.querySelector("p").innerHTML += "Clicked event on Start button is removed ";
+        btnStart.removeEventListener("click",someEventHander);
+      });
+     
+	  </script>
+</body>
+</html>
