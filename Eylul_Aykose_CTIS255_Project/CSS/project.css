@@ -1,0 +1,309 @@
+body {
+    background-color: lemonchiffon;
+}
+
+#menu * {
+    margin: 0 auto;
+    padding: center;
+    list-style-type: none;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+}
+
+div#menu {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+}
+
+a {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+}
+
+#menu ul.menu {
+    white-space: nowrap;
+    margin: 0 auto;
+    padding: center;
+}
+
+#menu ul.menu li {
+    display: inline-block;
+    height: 57px;
+    position: relative;
+}
+
+#menu ul.menu li div {
+    position: absolute;
+    top: 55px;
+    left: 0px;
+}
+
+#menu ul.menu li div div {
+    position: absolute;
+    top: -6px;
+    left: 176px;
+}
+
+#menu ul.menu li div ul li {
+    display: block;
+    float: none;
+    width: auto;
+    height: auto;
+}
+
+#menu ul.menu li a {
+    padding-left: 15px;
+    background-image: yellow;
+    background-repeat: no-repeat;
+    background-position: left -1000px;
+    display: inline-block;
+    margin: 6px 2px;
+}
+
+#menu ul.menu li a span {
+    padding-right: 15px;
+    padding-left: 0px;
+    background-image: green;
+    background-repeat: no-repeat;
+    background-position: right -1000px;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+#menu ul.menu li:hover a {
+    background-position: left -90px;
+}
+
+#menu ul.menu li:hover a span {
+    background-position: right -135px;
+}
+
+#menu ul.menu li.active a {
+    background-position: left 0px;
+}
+
+#menu ul.menu li.active a span {
+    background-position: right -45px;
+}
+
+#menu ul.menu li div ul li a {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    background: none;
+}
+
+#menu ul.menu li div ul li a span {
+    display: block;
+    padding: 0px;
+    background: none;
+    height: auto;
+    line-height: 25px;
+    padding: 10px 0 10px 12px;
+    white-space: normal;
+}
+
+#menu ul.menu li div {
+    width: 194px;
+    padding-top: 6px;
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-position: 0px top;
+}
+
+#menu ul.menu li div ul {
+    padding: 9px;
+    padding-top: 0;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: 0px bottom;
+}
+
+#menu ul.menu ul li:hover {
+    background-repeat: repeat-x;
+    background-position: 0% 100%;
+    background-color: black;
+}
+
+#menu ul.menu ul li:hover>a {
+    background-repeat: repeat-x;
+    background-position: 0% 0%;
+    background-color: transparent;
+    background-color: gray;
+}
+
+#menu {
+    height: 57px;
+    padding-left: 14px;
+    background-color: rgb(41, 41, 41);
+}
+
+#menu span {
+    color: #edf0f1;
+    text-shadow: 0 -1px 1px red;
+}
+
+#menu li:hover>a>span {
+    color: #ffffff;
+    text-shadow: 0 1px 1px royalblue, 0 2px 10px #969696;
+}
+
+#menu ul.menu li a span {
+    font-family: Times New Roman;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#menu ul.menu li div ul li a span {
+    font-family: Times New Roman;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#menu ul.menu li div ul {
+    padding-bottom: 8px;
+}
+
+#menu ul.menu li div ul li:first-child {
+    border-top-width: 0px;
+}
+
+#menu li>div {
+    visibility: hidden;
+}
+
+#menu li:hover>div {
+    visibility: visible;
+}
+
+#menu ul.menu ul li:hover {
+    background-color: rosybrown;
+}
+
+#menu ul.menu li div ul li {
+    border-bottom: 1px solid gray;
+    border-top: 1px solid ghostwhite;
+}
+
+#menu-box {
+    border: 1px solid gray;
+    height: 260px;
+    width: 585px;
+    margin: 10px 0;
+}
+
+#menu-box #menu {
+    margin: 15px auto;
+}
+
+header {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+}
+
+header img {
+    font-size: 50px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+*{
+    box-sizing: border-box
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color:honeydew;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(80, 179, 38, 0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,.dot:hover {
+    background-color: gray;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+h1 {
+    color: white;
+}
+
+#n {
+    color: white;
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.mySlides:nth-child(1) {
+    display: block;
+}

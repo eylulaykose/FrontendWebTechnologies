@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/project.css" type="text/css">
+    <title>Eylül Ayköse CTIS 255 Project</title>
+    <script type="text/javascript" src="Scripts/jquery-3.5.1.js"></script>
+    <script src="Scripts/js.js"></script>
+</head>
+<style>
+    table {
+        color:hotpink;
+    }
+    #me{
+        border-radius: 10px;
+        width: 400px;
+    }
+    #form{
+        color: brown;    
+    }
+
+    #button{
+        color: red;
+    }
+</style>
+
+<body>
+    <header>
+        <a href="index.html"><img src="Images/homephoto.png" alt="emblemofthepage"></a>;
+    </header>
+    <div id="menu">
+        <ul class="menu">
+            <li><a href="index.html" class="parent"><span>Home</span></a>
+                <li><a class="parent"><span>Cars</span></a>
+                    <div>
+                        <ul>
+                            <ul>
+                                <li><a href="mercedes.html"><span>Mercedes-Benz</span></a></li>
+                                <li><a href="ferrari.html"><span>Ferrari</span></a></li>
+                                <li><a href="lambo.html"><span>Lamborghini</span></a></li>
+                                <li><a href="BMW.html"><span>BMW</span></a></li>
+                                <li><a href="ford.html"><span>Ford</span></a></li>
+                            </ul>
+                    </div>
+                </li>
+                <li><a href="about.html"><span>About Me</span></a></li>
+                <li class="last"><a href="sources.html"><span>Resources</span></a></li>
+                </ul>
+    </div>
+    </div><br>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <td align="center"><img src="Images/about/EylulAykose.jpeg" id="me" alt=""></td>
+            <td><br><br> &nbsp;&nbsp;
+                <h1 style="color:green;">Hi, its me the creator of this web page :)</h1><br><br> &nbsp;&nbsp;My name is Eylül Ayköse. I am 21 years old and undergraduate student at <a href="https://w3.bilkent.edu.tr/bilkent/">Bilkent Universty</a>. My department is <a href="http://www.ctis.bilkent.edu.tr/tr/t_ctis_anasayfa.php"> CTIS</a> which is Computer Technology and Information System. This Page is my semester project for CTIS255 course.</td>
+        </tr>
+    </table>
+    <h3 style="color:blue;">To contact with me please fill the form.</h3>
+    <div class="row" id="form">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+          </div>
+          <div class="row" id="form">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate">
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class="row" id="form">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action" id="button">Submit
+        <i class="material-icons right"></i>
+      </button>
+</body>
+</html>

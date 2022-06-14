@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Eylül Ayköse CTIS 255 Project</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/game.css" type="text/css">
+    <link rel="stylesheet" href="CSS/project.css" type="text/css">
+    <script type="text/javascript" src="Scripts/jquery-3.5.1.js"></script>
+    <script src="Scripts/js.js"></script>
+    <script src="Scripts/game.js"></script>
+</head>
+
+<style>
+    #game{
+        background-color: blueviolet;
+        color: cornflowerblue;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <header>
+        <a href="index.html"><img src="Images/homephoto.png" alt="emblemofthepage"></a>;
+    </header>
+    <div id="menu">
+        <ul class="menu">
+            <li><a href="index.html" class="parent"><span>Home</span></a>
+                <li><a class="parent"><span>Cars</span></a>
+                    <div>
+                        <ul>
+                            <ul>
+                                <li><a href="mercedes.html"><span>Mercedes-Benz</span></a></li>
+                                <li><a href="ferrari.html"><span>Ferrari</span></a></li>
+                                <li><a href="lambo.html"><span>Lamborghini</span></a></li>
+                                <li><a href="BMW.html"><span>BMW</span></a></li>
+                                <li><a href="ford.html"><span>Ford</span></a></li>
+
+                            </ul>
+                    </div>
+                </li>
+                <li><a href="about.html"><span>About</span></a></li>
+                <li class="last"><a href="sources.html"><span>Source</span></a></li>
+                </ul>
+    </div>
+    </div><br>
+    <br>
+    <br>
+    <div class="game" id="game">
+        <h3>Blackjack Game</h3>
+        <div class="game-body">
+            <div class="game-options">
+                <input type="button" id="btnStart" class="btn" value="start" onclick="startblackjack()">
+                <input type="button" class="btn" value="hit me" onclick="hitMe()">
+                <input type="button" class="btn" value="stay" onclick="stay()">
+            </div>
+            <div class="status" id="status"></div>
+            <div id="deck" class="deck">
+                <div id="deckcount">52</div>
+            </div>
+            <div id="players" class="players">
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <script src="game.js" async defer></script>
+</body>
+
+</html>

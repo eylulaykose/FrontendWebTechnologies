@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/project.css" type="text/css">
+    <title>Eylül Ayköse CTIS 255 Project</title>
+    <script type="text/javascript" src="Scripts/jquery-3.5.1.js"></script>
+    <script src="Scripts/js.js"></script>
+</head>
+<script>
+    $(document).ready(function() {
+        $(".nws").mouseover(function() {
+            $(".nws").animate({
+                width: '1890px'
+            }, 1000);
+
+        });
+        $(".nws").mouseout(function() {
+            $(".nws").animate({
+                width: '100px'
+            }, 1000);
+
+        });;
+    });
+</script>
+<style>
+    #game, table, #nws, h2 {
+        color: darkorchid;
+        border-radius: 8px;
+    }
+    
+    #button {
+        border-radius: 20px;
+        background-color: darkorchid;
+        border: none;
+        color: darksalmon;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #car{
+        width: 320px;
+        height: 180px;
+        text-align: right;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+    }
+    
+    .nws {
+        width: 100px;
+        color: white;
+        background-color: fuchsia;
+    }
+    
+    #ggg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: darkcyan;
+}
+</style>
+
+<body>
+    <header>
+        <a href="index.html"><img src="Images/homephoto.png" alt="emblemofthepage"></a>;
+    </header>
+
+    <div id="menu">
+        <ul class="menu">
+            <li><a href="index.html" class="parent"><span>Home</span></a>
+                <li><a class="parent"><span>Cars</span></a>
+                    <div>
+                        <ul>
+                            <ul>
+                                <li><a href="mercedes.html"><span>Mercedes-Benz</span></a></li>
+                                <li><a href="ferrari.html"><span>Ferrari</span></a></li>
+                                <li><a href="lambo.html"><span>Lamborghini</span></a></li>
+                                <li><a href="BMW.html"><span>BMW</span></a></li>
+                                <li><a href="ford.html"><span>Ford</span></a></li>
+
+                            </ul>
+                    </div>
+                </li>
+                <li><a href="about.html"><span>About Me</span></a></li>
+                <li class="last"><a href="sources.html"><span>Resources</span></a></li>
+                </ul>
+    </div>
+    </div><br>
+    <br>
+    <div class="slideshow-container">
+        <div class="mySlides ">
+            <a href="mercedes.html"><img src="Images/merco/old_merco.jpg" style="width:100%"></a>
+        </div>
+        <div class="mySlides ">
+            <a href="ferrari.html"><img src="Images/ferrari/new_ferrari.jpg" style="width:100%"></a>
+        </div>
+        <div class="mySlides ">
+            <a href="lambo.html"><img src="Images/lambo/new_lambo.jpg" style="width:100%"></a>
+        </div>
+        <div class="mySlides ">
+            <a href="ford.html"><img src="Images/ford/new_ford.jpg" style="width:100%"></a>
+        </div>
+        <div class="mySlides ">
+            <a href="BMW.html"><img src="Images/bmw/new_bmw.jpg" style="width:100%"></a>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <table id="news">
+        <div class="nws">
+            <h1>NEWS</h1>
+        </div><br>
+        <tr>
+            <h2>&middot;New 2021 Lexus IS previewed, not coming to the UK</h2>
+            <td align="right">
+                <a href="https://www.autocar.co.uk/car-news/new-cars/new-2021-lexus-previewed-not-coming-uk"><img src="Images/news/lexus.jpg" id="car" alt=""></a>
+            </td>
+            <td> <br><br> &nbsp;&nbsp;Lexus has released a preview image of the new IS saloon ahead of its unveiling next week.
+                <br><br> &nbsp;&nbsp; The low-resolution, darkened shot, posted on the brand's Facebook page, shows the rear end of the new BMW 3 Series rival and reveals it features a full-width lighting strip, much like the UX crossover.
+                <br><br> &nbsp;&nbsp; The post also reveals an unveiling date of 9 June for the new model. However, Autocar has been told that the model won't be sold in either the European market or the UK.
+                <br><br> &nbsp;&nbsp; The IS has been offered here in its previous three generations, but sales have fallen in the face of the booming SUV market and newer range arrivals. Lexus shifted 3282 examples in 2019 - nearly half the number sold
+                in 2016.
+                <br><br> &nbsp;&nbsp; A Lexus UK spokesperson said: "Roughly 80% of all Lexus models sold in Europe are SUVs and the larger ES is outselling the current IS at a rate of around two-to-one, so we made the decision not to introduce this new
+                model to the UK market."
+                <br><br> &nbsp;&nbsp; Technical details for the new IS are thin on the ground. Without the tough European Union efficiency regulations to worry about, there may be less of a pressing need for plug-in hybrids or electric versions, so we
+                expect it will make use of Lexus's tried-and-tested parallel hybrid powertrain in launch variants.
+            </td>
+
+        </tr>
+    </table><br><br>
+    <hr>
+    <table>
+        <tr>
+            <h2>&middot;All mod cons: driving Porsche, Jensen and Alfa Romeo restomods</h2>
+            <td>
+
+                <a href="https://www.autocar.co.uk/car-news/features/all-mod-cons-driving-porsche-jensen-and-alfa-romeo-restomods"><img src="Images/news/porche.jpg" id="car" alt=""></a>
+            </td>
+            <td><br><br> &nbsp;&nbsp;They’re a new kind of performance car, if you like; all that modern supercars are not. They bring performance down to approachable levels but keep the craftsmanship and desirability sky high. At least, that’s how I imagined
+                it.
+                <br><br> &nbsp;&nbsp; So here we are, at Llandow Circuit, south Wales, with three of the best of them. The idea is to have a track drive today and a road blast tomorrow, with some boring everyday driving in between.
+                <br><br> &nbsp;&nbsp; All three cars do things differently. The smallest here is branded GTA-R by its specialist builder, Alfaholics. It’s a GTA-aping Alfa Romeo that can be based on any 105/115-series coupé – this one started as a 1967
+                1300 GT Junior. Alfaholics can simply restore one of those for you but, if you tick the full gamut of GTA-R options, you’ll spend the best part of £300,000 and have the kind of car you see here, with a 12-point roll-cage, seam-welded monocoque,
+                titanium suspension bits, Alfaholics gearbox internals and a twin-cam, twin-spark four-cylinder engine originally from a 75, bored and stroked to 2.3 litres, fitted with lightweight internals and making 240bhp. The car weighs just 830kg.
+            </td>
+        </tr>
+
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <h2>&middot;Updated 2020 Citroen C3 priced from £16,280 in UK</h2>
+            <td>
+                <a href="https://www.autocar.co.uk/car-news/new-cars/updated-2020-citroen-c3-priced-%C2%A316280-uk"><img src="Images/news/citreon.jpg" id="car" alt=""></a>
+            </td>
+            <td> <br><br> &nbsp;&nbsp;The brand says the C3 is its "most customisable hatchback" with 97 available exterior combinations. A range of two-tone paint schemes can be specified, with four roof colours - black, white, red and blue - available to
+                be paired with a range of contrasting tones for the main body of the car.
+                <br><br> &nbsp;&nbsp; Entry-level Feel trim - available only with a manual gearbox - comes with LED headlights, a 7.0in touchscreen, smartphone compatibility, lane departure warning and speed sign recognition as standard. Mid-range Flair
+                trim bumps the price up to £17,330 and adds 16in diamond-cut alloy wheels, automatic headlights and rear parking sensors.
+                <br><br> &nbsp;&nbsp; At the top of the range, priced from £18,730, is Flair Plus trim, which includes larger alloy wheels, satellite navigation, Advance Comfort seats and a reversing camera.
+                <br><br> &nbsp;&nbsp; The Ford Fiesta rival receives a mild exterior design in the form of a new front-end look, said to be inspired by the Cxperience concept of 2016. Reprofiled headlights (now with LED elements as standard) also feature,
+                while new designs for the Airbumps along the sides of the car can be chosen. Revised wheel-arch extensions and rear three-quarter panels are also brought in.
+                <br><br> &nbsp;&nbsp; Inside, efforts to improve comfort and ambience include the new armchair-style Advanced Comfort seats, taken from the updated C4 Cactus, and a new centre armrest. A ‘techwood’ finish brings new soft-touch materials
+                and wood-effect trim, too.</td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <h2>&middot;Suzuki reveals pricing for mild-hybrid Swift Sport, Vitara and S-Cross</h2>
+            <td>
+                <a href="https://www.autocar.co.uk/car-news/new-cars/suzuki-reveals-pricing-mild-hybrid-swift-sport-vitara-and-s-cross"><img src="Images/news/suzukı.jpg" id="car" alt=""></a>
+            </td>
+            <td><br><br> &nbsp;&nbsp;The two crossover models are priced from £21,749 for the Vitara and £20,749 for the S-Cross. The Swift Sport is priced from £21,570, although all three are being offered from launch with 0% PCP deals.
+                <br><br> &nbsp;&nbsp; That is now the only powertrain option available on Suzuki's hatchback, with the brand seeking to meet upcoming emissions regulations. It uses a 48V set-up alongside a reworked version of the outgoing car's 1.4-litre
+                turbocharged four-cylinder petrol engine.
+                <br><br> &nbsp;&nbsp; The new powertrain generates 127bhp, down 11bhp on the outgoing model, although torque increases by 3lb ft to 173lb ft. The result is a quoted 0-62mph time that reduces by a second to 9.1sec, although the Swift Sport
+                claims the same 130mph top speed as before.
+                <br><br> &nbsp;&nbsp; The mild-hybrid system helps to generate a higher level of torque lower in the rev range, it is claimed. Efficiency increases are promised, and although the 50.1mpg quoted is little different to the outgoing car,
+                that was measured under the older, less realistic NEDC economy test cycle. </td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <h2>&middot;Bentley Bentayga vs Range Rover - luxury SUV comparison</h2>
+            <td>
+                <a href="https://www.autocar.co.uk/car-news/new-cars/bentley-bentayga-vs-range-rover-luxury-suv-comparison"><img src="Images/news/bentley.jpg" id="car" alt=""></a>
+            </td>
+            <td><br><br> &nbsp;&nbsp;And if you’re going to do it in any Range Rover, might I recommend one of these newfangled SVAutobiography models? It’s the slightly awkwardly named recognition that people with an unmentionable amount of money don’t always
+                want to be seen in a supercar or what might be mistaken for an airport limousine. They might be prepared to spend an incredible amount on a 4x4.
+                <br><br> &nbsp;&nbsp; This seems blindingly obvious now, but until recently, it’s as if there has been a cap on the money an SUV can ask. But like Roger Bannister breaking the four-minute mile, once somebody does it, everyone realises
+                they can. Hence the Bentley Bentayga, which had been a quietly mooted, should-we-shouldn’t-we project at Bentley Motors until Wolfgang Dürheimer arrived as Bentley’s gaffer (the first time) in 2011 and just told them to get on with it.
+                He’d seen what the Cayenne had done for Porsche.
+                <br><br> &nbsp;&nbsp; The following year, we all took a deep breath and a step backwards when he pulled the covers off the EXP 9 F concept at the Geneva motor show; even Dürheimer talking to a bloke with a falcon on his arm couldn’t quite
+                distract from its face.</td>
+        </tr>
+    </table>
+    <hr>
+    <br><br>
+    <h1 id="ggg">Let's leave the our love for cars and play some Blackjack!</h1>
+    <span id="ggg">If you agree, press the button to relieve from stress!</span><br><br>
+    <form action="game.html">
+        <input id="button" type="submit" value="Let's play" />
+    </form>
+
+</body>
+<br>
+<br>
+<hr>
+
+</html>

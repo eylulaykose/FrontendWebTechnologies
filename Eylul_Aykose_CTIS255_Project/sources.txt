@@ -1,0 +1,32 @@
+mercedes -> 
+emblem: https://lh3.googleusercontent.com/proxy/2FW1jAfTpxVC7v3S73uavDfF6_0sSM3XM0Om4mAjnWEZ9y2Sdo2v7shHoHOQEUKQn4GJqFVk33MTFlaevQQ-g20m3Cm49jXg9N7RTNlGZsvT--2MWCb0UdeLoFuNPCGNeSo
+old:https://www.pixel4k.com/wp-content/uploads/2019/04/mercedes-old-4k_1554245268.jpg
+new:https://besthqwallpapers.com/Uploads/27-8-2018/63302/thumb2-4k-mercedes-benz-s-class-coupe-brabus-2018-c217.jpg
+carlbenz: https://www.mercedes-benz.com/en/classic/history/corporate-history/_jcr_content/root/slider_4/sliderchilditems/slideritem_0/image/MQ7-0-image-20190114140623/classic_historie_geschichte_1884_gottliebdaimler_3400x1440.jpeg
+hist: https://www.mercedes-benz.com/en/classic/history/corporate-history/
+
+lamborghini -> 
+emblem:https://cdn.motor1.com/images/mgl/bN6Wk/s4/en-unlu-otomobil-amblemleri-ve-anlamlari.jpg
+old:https://wall.bestcarmag.com/sites/default/files/lamborghini-diablo-wallpaper-hd-40031-9872409.jpg
+new: http://www.newcarcars.com/wp-content/uploads/2019/03/2020-Lamborghini-Aventador-SVJ-Roadster-Front-Three-Quarter-Wallpaper2.jpg
+hist: https://www.lamborghini.com/en-en/history
+
+Ferrari-> 
+emblem:https://en.wikipedia.org/wiki/Ferrari#/media/File:Ferrari-Logo.svg
+old:https://cdn.motor1.com/images/mgl/XK91e/s3/ferrari-f40-30th-anniversary.jpg
+new:https://robbreportedit.files.wordpress.com/2019/08/ferrari_sf90_stradale_2.jpg
+f1:https://upload.wikimedia.org/wikipedia/commons/7/7d/FIA_F1_Austria_2018_Nr._5_Vettel.jpg
+hist:https://corporate.ferrari.com/en/about-us/history
+
+BMW-> 
+emblem:https://uygunarabalar.com/wp-content/uploads/2019/03/BMW-logo-2000-640x550.jpg
+old:https://i.redd.it/n2oiwo1loi921.jpg
+new:https://wallpaperaccess.com/full/2480711.jpg
+hist: https://www.bmw.com/en/automotive-life/BMW-name-meaning-and-history.html
+
+Ford-> 
+emblem:https://i.etsystatic.com/16581340/r/il/409a91/1381381056/il_570xN.1381381056_g85c.jpg
+old:https://animal-wallpaper.com/wallpaper/ford-mustang-image-For-Background-HD-Wallpaper.jpg
+new:https://wallpapercave.com/wp/wp4697720.jpg
+oldest:https://corporate.ford.com/content/dam/corporate/en/company/history/1896_Ford_Quadricycle.jpg
+hist:https://en.wikipedia.org/wiki/History_of_Ford_Motor_Company
