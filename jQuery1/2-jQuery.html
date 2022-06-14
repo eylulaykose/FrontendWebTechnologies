@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">    
+    <title>DHTML with jQuery</title>   
+    <style>
+        p#myP{
+           
+        }
+    </style>
+   
+</head>
+<body>
+    <h1>Header1</h1>
+    <h1>Header2</h1>
+    <p class="pr">Lorem ipsum dolor sit amet.</p>
+    <p class="pr">Lorem ipsum dolor sit amet.</p>
+    <p id="myP">Test</p>
+    <p class="pr">Lorem ipsum dolor sit amet.</p>
+           
+</body>
+</html>
+<script>    
+    $(function(){
+        $("h1").click(function() {
+            $(this).css("background-color","orange");  //Manage style        
+            $("p:last").css({"font-size":"20pt","font-weight":"bold"});  //manage style 
+            $("p:first").css("color","blue");   //Manage style           
+            $("p:last").html("new content"); //manage content
+            $(document.body).animate({"font-size":"40px"},2000); //add animation to body         
+        });
+        
+    })
+</script>

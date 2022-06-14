@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">    
+    <title>DHTML with jQuery</title>   
+    <style>
+        #divWidthChange{
+          margin: 20px;          
+          width: 100px;
+          height: 100px; 
+          left:200px;
+          top: 200px;   
+          background-color: blue; 
+          border: 1px solid black; 
+          text-align: center;    
+        } 
+        div.btn{
+          width: 100px;
+          background-color: orange; 
+          text-align: center;
+          font-weight: bold;                               
+        }       
+        div.container{
+          width: 250px;
+          display: flex;
+          justify-content: space-between;
+        }
+    </style>
+   
+</head>
+<body>
+  <div class="container">
+    <div class="btn" id="btnLeft">Width</div>
+    <div class="btn" id="btnRight">Height</div>    
+  </div>
+  <div id="divWidthChange">Change Width</div>
+           
+</body>
+</html>
+<script>    
+    $(function(){  
+       var w= $("div#divWidthChange").width();
+       var h= $("div#divWidthChange").height();       
+       $("div.btn").click(function(){                 
+          if($(this).html()=="Width")
+              w +=10;              
+          else if($(this).html()=="Height")
+              h +=10;          
+          //$("div#divWidthChange").width(w+"px");
+          //$("div#divWidthChange").height(h+"px");
+          $("div#divWidthChange").width(w+"px").height(h+"px");
+      });
+        
+    })
+</script>
+

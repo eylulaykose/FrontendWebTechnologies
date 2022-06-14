@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">    
+    <title>DHTML with jQuery</title>   
+    <style>
+        
+    </style>
+   
+</head>
+<body>
+    <h1 id="addPrg">Add new paragraph</h1>    
+    <h1 id="addLi">Add new item</h1>    
+    <p class="pr">Lorem ipsum dolor sit amet.</p>
+    <p class="pr">Lorem ipsum dolor sit amet.</p>
+    <p id="myP">Test</p>
+    <p class="pr">Lorem ipsum dolor sit amet.</p>
+    <ul class="items">
+        <li>Item</li>
+    </ul>   
+</body>
+</html>
+<script>
+    var countPrg=1;   
+    var countLi=1;  
+    $(function(){
+        $("h1#addPrg").click(function() {           
+            clr = Math.floor(Math.random()*255);
+            clg = Math.floor(Math.random()*255);
+            clb = Math.floor(Math.random()*255);
+            bc = `rgb(${clr},${clg},${clb})`;
+            //$(document.body).append("<p>new paragraph "+countPrg+"</p>");
+            $(document.body).append(`<p style='background-color:${bc}'>new paragraph ${countPrg}</p>`);
+            countPrg++;
+        });
+        $("h1#addLi").click(function() {  
+            clr = Math.floor(Math.random()*255);
+            clg = Math.floor(Math.random()*255);
+            clb = Math.floor(Math.random()*255);
+            c = `rgb(${clr},${clg},${clb})`;
+            $("ul").append(`<li style='color:${c}'>new item ${countLi}</li>`);
+            countLi++;
+        });
+
+        
+    })
+</script>

@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">    
+    <title>DHTML with jQuery</title>   
+    <style>
+        
+    </style>
+   
+</head>
+<body>
+    <p id="myPid">Lorem ipsum dolor sit amet.</p>
+    <p class="myPclass">Lorem ipsum dolor sit amet.</p>
+    <table>
+      <tr><th>Name</th><th>Surname</th></tr>
+      <tr>
+        <td>Ali</td>
+        <td>candan</td>
+      </tr>
+      <tr>
+        <td>Veli</td>
+        <td>Korkmaz</td>
+      </tr>
+      <tr>
+        <td>Ali</td>
+        <td>Aydogmuş</td>
+      </tr>
+      <tr>
+        <td>Cemil</td>
+        <td>Karlı</td>
+      </tr>
+      <tr>
+        <td>Veli</td>
+        <td>Tokgoz</td>
+      </tr>
+      <tr>
+        <td>Zeynep</td>
+        <td>Aydogmus</td>
+      </tr>
+      <tr>
+        <td>Ibrahim</td>
+        <td>Sal</td>
+      </tr>
+      <tr>
+        <td>Defne</td>
+        <td>Ay</td>
+      </tr>      
+    </table>
+</body>
+</html>
+<script>    
+    $(function(){        
+        $("tr th").css( "background-color","red");       
+        $("tr:odd").css( "background-color","aqua");
+        $("tr th, tr:odd").css( "background-color","aqua");
+
+        $("tr:even").css( "background-color","pink");
+        $("tr").mouseover(function() {           
+            clr = Math.floor(Math.random()*255);
+            clg = Math.floor(Math.random()*255);
+            clb = Math.floor(Math.random()*255);
+            bc = `rgb(${clr},${clg},${clb})`;
+            $(this).css({backgroundColor:bc});
+        });
+        $("tr").mouseout(function() {           
+            $("tr:odd").css( "background-color","aqua");
+            $("tr:even").css( "background-color","pink");            
+        });
+
+        $(".myPclass, #myPid").click(function(){
+          rdnumber = Math.floor(Math.random()*100);     
+          $(this).html($(this).html()+" "+rdnumber);          
+        });      
+      });
+            
+</script>
