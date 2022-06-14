@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="scripts/3-animation.js"></script>
+    
+    <style>
+        body { text-align: center;}
+        p { 
+            margin-top: 150px; 
+            font-size:24px;
+            display: none;
+            font-size: 40px;
+        }
+        
+        #custom { 
+            display: block;
+            position: relative;
+            font-size: 10px;
+            opacity: 0 ;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button>Show</button>
+        <button>Hide</button>
+        <button>Toggle</button>
+        <button>Composite</button>
+        <button>Custom</button>
+    </div>
+    <p>This is a sample paragraph</p>
+    <p id="composite">Fade In/Out Effect in action....</p>
+    <p id="custom">Custom Animation Here!!</p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Lorem, ipsum.</h1>
+  <ul>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+  </ul>
+
+  <h1>Lorem ipsum dolor sit.</h1>
+  <ul>
+    <li>city</li>
+    <li>city</li>
+    <li>city</li>
+  </ul>
+
+</body>
+
+</html>
+<script>
+  $(function () {
+    var count = 1;
+    $("ul li").each(function () {
+      $(this).append(" " + count);
+      count++;
+    });
+
+    $("h1").each(function () {
+      $(this).css({ "color": "blue" });
+      $(this).css({ "background-color": "yellow" }); //as a property css notation is used, so that there is double quotation
+      $(this).css({ backgroundColor: "red" }); //as a css property javaScript notatipn is usedi so that there is no bouble quotation and - character is removed next word first letter is uppercase. 
+    });
+  });
+</script>
