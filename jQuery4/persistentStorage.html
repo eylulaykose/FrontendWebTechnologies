@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+  </style>
+</head>
+
+<body>
+  <div>
+    <input type="text" id="userName">
+    <button id="btnSet">Set</button>
+    <button id="btnRemove">Remove</button>
+  </div>
+
+  <div id="panel"></div>
+</body>
+
+</html>
+<script>
+  $(function () {
+    /*What is localStorage in JavaScript? localStorage is a property that allows JavaScript sites and apps to save key-value pairs in a web browser with no expiration date.
+    */
+    const userName = localStorage.getItem("uname");
+    const out = userName == null ? "No username yet" : userName;
+    $("#panel").text(out);
+
+    $("#btnSet").click(function () {
+      localStorage.setItem("uname", $("#userName").val());
+      window.location.href = ""; //refresh the page
+    });
+    $("#btnRemove").click(function () {
+      localStorage.removeItem("uname");
+      window.location.reload() = ""; //reload the page
+
+    });
+
+  });
+
+</script>

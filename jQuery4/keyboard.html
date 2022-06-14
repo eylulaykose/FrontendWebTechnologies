@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title></title>
+      <script src="scripts/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $( function() {
+             //
+             // KEYDOWN: when the key on the keyboard is held down.
+             // e.which stores "scan code" of the key of any key on the keyboard.
+             // "scan code" is different than unicode/ASCII code, it does not 
+             // differentiate between upper and lower cases.
+             // KEYPRESS: is similar to KEYDOWN, the only difference is if the key is
+             //  a printable character, keypress event is also fired. When you press Esc,
+             // F1 or arrow keys, they do not fire any keypress event. It stores the 
+             // unicode/ASCII representation of the key, not "scan code". Therefore,
+             // "A" is different than "a" in keypress.
+             // KEYUP: this event is fired when the key is released. It store "scan code"
+             // of the key.
+             // focus() function is used to give the focus to an element. When the page is ready
+             // it transfers focus to the input text box.
+             //
+             var display = [];
+            
+             $("div#outer input").keydown(function(e){
+                   addToLog("keydown", e.which) ;
+                   //e.preventDefault();
+             }).keypress( function(e){
+                   addToLog("keypress", e.which) ;
+             }).keyup(function(e){
+                   addToLog("keyup", e.which);
+             }).focus();
+             
+             // This part displays the events occured so far.
+             function addToLog(type,key) {
+                
+                if ( display.length > 20 ){
+                    display.length = 0;
+                 } 
+                 // add new line to the panel.
+                 // push method of array object inserts an item at the end of the array.
+                 display.push({ "type" : type, "key" : key}) ;
+                 
+                 displayLog();
+             }
+             function displayLog(){
+                 $("#panel").html("") ; // clear panel
+                 for (var i=0; i<display.length;i++){
+                     var str = "<span class='" + display[i].type + "'>" ;
+                     str += " Type : " + display[i].type ;
+                     str += " Key : " + display[i].key ;
+                     if ( display[i].type == "keypress") {
+                         
+                         // String.fromCharCode is used to convert character code from
+                         // integer to string. For example; key = 65; but
+                         // String.fromCharCode( key ) function converts  65 to the string "A"
+                         // 
+                         str += " Char : " + String.fromCharCode(display[i].key) ;
+                     }
+                     str += "</span><br>";
+                     $("#panel").append(str);
+                 }
+                 $("span:last").css({"background-color" :"#DDD" , "font-weight":"bold", "color":"black"}); ;
+                 
+             }
+        });
+    </script>
+    <style>
+        div#outer {
+            text-align: center;
+        }
+        div#outer h1 {
+            font-size:18px ;
+        }
+        div#outer input {
+            font: 16px courier ;
+            background: #ffffcc;
+        }
+        div#outer div#panel {
+            margin-top: 20px;
+        }
+        span { padding-right: 25px; padding-left:25px; }
+        .keydown { color : red} 
+        .keyup { color:blue}
+        .keypress {color:green}
+        
+    </style>
+  </head>
+  <body>
+      <div id="outer">
+          <h1>Keyboard Events</h1>
+          <input type="text" size="50">
+          <div id="panel"></div>
+      </div>
+  </body>
+</html>

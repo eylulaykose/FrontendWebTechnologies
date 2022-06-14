@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+  <style>
+    div.menuItems div {
+      width: 210px;
+      background-color: orange;
+      border: 1px solid black;
+      border-radius: 10px;
+      margin: 5px;
+      text-align: center;
+    }
+
+    div#effect {
+      margin: 10px;
+    }
+
+    div.detail {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="menuItems">
+      <div id="applyHideEffect">Hide Animation Effect</div>
+      <div id="applyShowEffect">Show Animation Effect</div>
+      <div id="applyFadeOutEffect">FadeOut Animation Effect</div>
+      <div id="applyFadeInEffect">FadeIn Animation Effect</div>
+      <div id="applyFadeToggleEffect">FadeTogggle Animation Effect</div>
+    </div>
+
+  </div>
+  <div id="effect">
+    <h1>Apply Animation Effect</h1>
+  </div>
+
+</body>
+
+</html>
+<script>
+  $(function () {
+    $("#applyHideEffect").click(function () {
+      $("#effect").hide();
+    });
+    $("#applyShowEffect").click(function () {
+      $("#effect").show();
+    });
+    $("#applyFadeOutEffect").click(function () {
+      //$("#effect").fadeOut();
+      //$("#effect").fadeOut(2000);
+      $("#effect").fadeOut(2000, function () {
+        alert("fadeout is completed");
+      });
+    });
+
+    $("#applyFadeInEffect").click(function () {
+      $("#effect").fadeIn();
+      //$("#effect").fadeIn(2000);
+      $("#effect").fadeIn(2000, function () {
+        $(this).css("color", "red");
+      });
+    });
+    $("#applyFadeToggleEffect").click(function () {
+      //$("#effect").fadeToggle();
+      //$("#effect").fadeToggle(2000);
+      $("#effect").fadeToggle(2000, function () {
+        $(this).css("color", "red");
+      });
+    });
+  });
+</script>

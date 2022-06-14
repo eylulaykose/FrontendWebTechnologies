@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+  <style>
+    div.btn {
+      width: 100px;
+      background-color: orange;
+      margin: 10px;
+      border: 1px solid black;
+      text-align: center;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="btn" id="btnStop">Stop</div>
+  <div class="btn" id="btnResume">Resume</div>
+  <div>
+    <h1 id="counter">0</h1>
+  </div>
+
+</body>
+
+</html>
+<script>
+  $(function () {
+    intervalId = setInterval(increment, 500);
+
+    $("#btnStop").click(function () {
+      clearInterval(intervalId);
+    });
+    $("#btnResume").click(function () {
+      intervalId = setInterval(increment, 500);
+
+    });
+
+    function increment() {
+      $("#counter").html(parseInt($("#counter").html()) + 1);
+    }
+
+  });
+
+</script>

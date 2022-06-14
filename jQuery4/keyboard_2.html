@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title></title>
+      <script src="scripts/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $( function() { 
+             /*
+              * Scan Codes for Left, Up, Right and Down arrow keys
+              *  37, 38, 39, 40 respectively.
+              */
+             var speed = 5;
+             $(window).keydown( function(e){
+                var ufo = $("#ufo") ;  
+                var pos = ufo.offset() ; // get current position
+                switch( e.which) {
+                 case 39 : pos.left += speed ; break; // Right arrow key
+                 case 37 : pos.left -= speed ; break; // Left arrow key
+                 case 38 : pos.top -= speed ; break; // Up arrow key
+                 case 40 : pos.top += speed ; break; // Down arrow key
+                }
+                // set new position of ufo object
+                ufo.offset(pos) ;
+             })
+        });
+    </script>
+    <style>
+        #ufo {
+            position: absolute;
+            top: 100px;
+            left:100px;
+            width: 50px;
+        }
+    </style>
+  </head>
+  <body>
+      <img src="images/ufo.jpg" id="ufo">
+  </body>
+</html>

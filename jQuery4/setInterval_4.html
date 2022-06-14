@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+  <head>
+      <title></title>
+      <script src="scripts/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $( function() { 
+             var speed = 5 ;  // + : to right, - : to left
+             setInterval( function() {
+                 // get the position of the batman
+                 var pos = $("#batman").offset() ;
+                 // calculate the range
+                 var maxW = $(window).width() - parseInt($("#batman").width()) ;
+                 // update batman's position.
+                 pos.left += speed ;
+                 // if it exceeds the boundary,  take it back, and change direction.
+                 if ( pos.left > maxW) {
+                     pos.left = maxW  ;
+                     speed = -speed ;
+                 }   
+                 if ( pos.left < 0 ) {
+                     pos.left = 0 ;
+                     speed = -speed ;
+                 }
+                 // set the final position of batman.
+                 $("#batman").offset(pos);
+                 
+             }, 40) ; // in each 40 ms. that is, 25 frames per second
+        });
+    </script>
+    <style>
+        #batman {
+            position: absolute ;
+            top: 100px; left: 100px;
+        }
+    </style>
+  </head>
+  <body>
+      <img src="img/batman.jpg" id="batman">
+  </body>
+</html>

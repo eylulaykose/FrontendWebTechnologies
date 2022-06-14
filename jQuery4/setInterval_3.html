@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title></title>
+      <script src="scripts/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $( function() { 
+             //
+             // Create a timer that calls "incr" function in each 1000 miliseconds = 1second
+             //
+             setInterval( incr, 1000) ;
+             function incr() {
+                 // increment the content of #counter by 1.
+                 var c = parseInt($("#counter").html());
+                 c++;
+                 $("#counter").html(c) ;
+             }
+             
+             // Create another timer that calls change image in each 3 seconds.
+             // you can write your timer function within setInterval(), 
+             var count = 0 ;
+             setInterval( function() {
+                 count = ( count + 1 ) % 3 ;
+                 $("#imageDiv img").attr("src", "img/car" + (count + 1 ) + ".jpg" ) ;
+             }, 3000) ;
+        });
+    </script>
+    <style>
+        #counter {
+            text-align: center ;
+            font: bold 26px blue ; 
+        }
+        #imageDiv {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+    </style>
+  </head>
+  <body>
+      <div id="counter">0</div>
+      <div id="imageDiv">
+          <img src="img/car1.jpg">
+      </div>
+   </body>
+</html>

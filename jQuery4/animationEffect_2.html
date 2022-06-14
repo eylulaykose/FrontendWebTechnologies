@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+  <style>
+    div.menuItems div {
+      width: 210px;
+      background-color: orange;
+      border: 1px solid black;
+      border-radius: 10px;
+      margin: 5px;
+      text-align: center;
+    }
+
+    div#effect {
+      margin: 10px;
+    }
+
+    div.detail {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="menuItems">
+      <div id="applySlideDownEffect">SlideDown Animation Effect</div>
+      <div id="applySlideUpEffect">SlideUp Animation Effect</div>
+    </div>
+
+  </div>
+
+  <div class="detail" id="detail1">
+    <p>SlideDown Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo labore fugiat mollitia odit
+      repudiandae
+      doloremque dolorem laboriosam voluptatibus voluptate. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Officia vel culpa esse obcaecati et quia cumque exercitationem quisquam, molestias enim. Lorem ipsum dolor sit
+      amet
+      consectetur adipisicing elit. Modi minima esse cupiditate doloremque hic vitae eum necessitatibus quod natus
+      nihil.</p>
+    <p>SlideDown Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo labore fugiat mollitia odit
+      repudiandae
+      doloremque dolorem laboriosam voluptatibus voluptate. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Officia vel culpa esse obcaecati et quia cumque exercitationem quisquam, molestias enim. Lorem ipsum dolor sit
+      amet
+      consectetur adipisicing elit. Modi minima esse cupiditate doloremque hic vitae eum necessitatibus quod natus
+      nihil.</p>
+    <p>SlideDown Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo labore fugiat mollitia odit
+      repudiandae
+      doloremque dolorem laboriosam voluptatibus voluptate. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Officia vel culpa esse obcaecati et quia cumque exercitationem quisquam, molestias enim. Lorem ipsum dolor sit
+      amet
+      consectetur adipisicing elit. Modi minima esse cupiditate doloremque hic vitae eum necessitatibus quod natus
+      nihil.</p>
+    <p>SlideDown Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo labore fugiat mollitia odit
+      repudiandae
+      doloremque dolorem laboriosam voluptatibus voluptate. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Officia vel culpa esse obcaecati et quia cumque exercitationem quisquam, molestias enim. Lorem ipsum dolor sit
+      amet
+      consectetur adipisicing elit. Modi minima esse cupiditate doloremque hic vitae eum necessitatibus quod natus
+      nihil.</p>
+    <p>SlideDown Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo labore fugiat mollitia odit
+      repudiandae
+      doloremque dolorem laboriosam voluptatibus voluptate. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Officia vel culpa esse obcaecati et quia cumque exercitationem quisquam, molestias enim. Lorem ipsum dolor sit
+      amet
+      consectetur adipisicing elit. Modi minima esse cupiditate doloremque hic vitae eum necessitatibus quod natus
+      nihil.</p>
+  </div>
+
+  <div id="detail2">
+    <p>SlideUp Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo labore fugiat mollitia odit
+      repudiandae
+      doloremque dolorem laboriosam voluptatibus voluptate. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Officia vel culpa esse obcaecati et quia cumque exercitationem quisquam, molestias enim. Lorem ipsum dolor sit
+      amet
+      consectetur adipisicing elit. Modi minima esse cupiditate doloremque hic vitae eum necessitatibus quod natus
+      nihil.</p>
+    <p>SlideUp Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo labore fugiat mollitia odit
+      repudiandae
+      doloremque dolorem laboriosam voluptatibus voluptate. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Officia vel culpa esse obcaecati et quia cumque exercitationem quisquam, molestias enim. Lorem ipsum dolor sit
+      amet
+      consectetur adipisicing elit. Modi minima esse cupiditate doloremque hic vitae eum necessitatibus quod natus
+      nihil.</p>
+    <p>SlideUp Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo labore fugiat mollitia odit
+      repudiandae
+      doloremque dolorem laboriosam voluptatibus voluptate. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Officia vel culpa esse obcaecati et quia cumque exercitationem quisquam, molestias enim. Lorem ipsum dolor sit
+      amet
+      consectetur adipisicing elit. Modi minima esse cupiditate doloremque hic vitae eum necessitatibus quod natus
+      nihil.</p>
+    <p>SlideUp Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo labore fugiat mollitia odit
+      repudiandae
+      doloremque dolorem laboriosam voluptatibus voluptate. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Officia vel culpa esse obcaecati et quia cumque exercitationem quisquam, molestias enim. Lorem ipsum dolor sit
+      amet
+      consectetur adipisicing elit. Modi minima esse cupiditate doloremque hic vitae eum necessitatibus quod natus
+      nihil.</p>
+    <p>SlideUp Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo labore fugiat mollitia odit
+      repudiandae
+      doloremque dolorem laboriosam voluptatibus voluptate. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Officia vel culpa esse obcaecati et quia cumque exercitationem quisquam, molestias enim. Lorem ipsum dolor sit
+      amet
+      consectetur adipisicing elit. Modi minima esse cupiditate doloremque hic vitae eum necessitatibus quod natus
+      nihil.</p>
+  </div>
+
+</body>
+
+</html>
+<script>
+  $(function () {
+    $("#applySlideDownEffect").click(function () {
+      $("#detail1").slideDown("slow", function () {
+        alert("slideDown animation completed");
+      });
+    });
+    $("#applySlideUpEffect").click(function () {
+      $("#detail2").slideUp("slow", function () {
+        alert("slideUp animation completed");
+      });
+    });
+
+  });
+</script>
