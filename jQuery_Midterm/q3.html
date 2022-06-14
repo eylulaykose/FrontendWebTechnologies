@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <style>
+        table {
+            border: 1px solid black;
+            border-spacing: 0;
+            margin: 20px auto;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .label {
+            background: #DDD;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="myForm">
+        <table>
+            <tr>
+                <td colspan="7">
+                    <h1>Company Support</h1>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Marital Status:</td>
+                <td>
+                    <select id="status">
+                        <option value="0">Single</option>
+                        <option value="1">Married</option>
+                    </select>
+                </td>
+                <td class="label">Spouse Working: </td>
+                <td><input type="checkbox" id="working"></td>
+                <td class="label">Children: </td>
+                <td>
+                    <input type="text" id="children" value="0" size="5">
+                </td>
+                <td>Gender<input type="radio" name="gender" value="male" checked>Male</label>
+                    <input type="radio" name="gender" value="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7"><input type="button" value="Calculate" id="calculate" /></td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <textarea id="panel" cols="70" rows="6"></textarea>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+
+</html>
+<script>
+    $(function () {
+
+        $("#calculate").click(function () {
+            var percentage = 50;
+            var marital = $("#status").val();
+            var children = parseInt($("#children").val());
+            if (isNaN(children) || children < 0) {
+                $("#panel").val("Children count is not valid");
+                return;
+            }
+
+            if (marital == 1 && $("#working").prop("checked") == false) {
+                percentage += 20;
+            }
+
+            var radioValue = $("input[name='gender']:checked").val();
+            if (radioValue == 'male') {
+                console.log(radioValue);
+                percentage += 5;
+            }
+            percentage += $("#children").val() * 10;
+            myForm.panel.value = "Percentage : " + percentage + "%";
+            var total = 3 * percentage;
+            if (total > 300) total = 300;
+            $("#panel").append("\nTotal Support : " + total + " TL");
+
+        });
+    });
+</script>

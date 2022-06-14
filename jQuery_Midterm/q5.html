@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <style>
+        div#d1,
+        div#d2 {
+            background-color: yellow;
+            height: 100px;
+            width: 300px;
+            margin: 10px;
+        }
+
+        div#res {
+            height: 300px;
+            margin: 10px;
+        }
+    </style>
+
+    <script>
+        function changeContent(str) {
+
+        }
+        function changeBackground() {
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="d1">on Mouse Over and On Mouse Out
+    </div>
+    <div id="d2">on Click</div>
+
+    <div id="res">
+        output
+    </div>
+</body>
+
+</html>
+<script>
+    $(function () {
+        $("#d1").hover(
+            function () {
+                $("#res").html("OVER");
+            },
+            function () {
+                $("#res").html("OUT");
+            }
+        );
+        $("#d2").click(function () {
+            var r = Math.floor(Math.random() * 255);
+            var color = "rgb(" + r + ",100,100)";
+            //$("#res").css({ backgroundColor: color });
+            $("#res").css({ "background-color": color });
+        });
+
+
+    });
+</script>

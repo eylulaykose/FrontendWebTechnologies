@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div.main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        div.sub {
+            margin-bottom: 10px;
+            border: 1px solid blue;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid black;
+        }
+    </style>
+
+    <script>
+        function Water(name, price, type, img) {
+            this.name = name;
+            this.price = price;
+            this.type = type;
+            this.img = img;
+            this.display = function (selectedType) {
+                var output = "<div>"
+                output += "<img src='images/" + this.img + "'/><br>";
+                output += this.name;
+                output += "<br><b>" + this.price + "</b> TL";
+                output += "</div>";
+                return output;
+            }
+        }
+
+        var water = [
+            new Water("limon 6x200ml", 11, "minarel", "m2.png"),
+            new Water("19L Damacana", 20, "water", "w1.png"),
+            new Water("Sadec 6x200ml", 10, "minarel", "m1.png"),
+            new Water("15L Cam Damacana", 25, "water", "w2.png"),
+            new Water("2x10 L", 15, "water", "w3.png"),
+            new Water("Elma 6x200ml", 11, "minarel", "m3.png")
+        ];
+
+    </script>
+
+
+</head>
+
+<body>
+    <div class="main">
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    out = "<div class='sub'>";
+
+    $.each(water, function (index, value) {
+        if (value.type == "water") {
+            out += value.display();
+        }
+    });
+    out += "</div>";
+
+    out += "<div class='sub'>";
+    for (var i = 0; i < water.length; i++) {
+        if (water[i].type == "minarel") {
+            out += water[i].display();
+        }
+    }
+    out += "</div>";
+    $(".main").html(out);
+</script>

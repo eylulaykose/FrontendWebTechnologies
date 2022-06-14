@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <style>
+        select {
+            margin: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+        <select id="year1">
+            <script>
+                var d = new Date();
+                curentYear = d.getFullYear();
+
+                for (var y = curentYear; y > 2000; y--)
+                    document.write("<option value='" + y + "'>" + y + "</option>");
+            </script>
+        </select>
+        <br>
+
+        <select id="year2"></select>
+
+        <br>
+
+    </form>
+    <div id="res">
+
+    </div>
+</body>
+
+</html>
+<script>
+    $(function () {
+        options = "";
+        for (var y = curentYear; y > 2000; y--) {
+            options += "<option value='" + y + "'>" + y + "</option>";
+            //$("<option value='" + y + "'>" + y + "</option>").appendTo("#year2");
+        }
+        $("#year2").append(options);
+
+
+        $("#year1").change(function () {
+            var age = curentYear - $("#year1").val();
+            $("#res").html("Age is " + age);
+        });
+        $("#year2").change(function () {
+            var age = curentYear - $(this).val();
+            $("#res").text("Second Select action <br>Age is " + age);
+        });
+    });     
+</script>

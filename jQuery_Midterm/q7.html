@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+  <title>Document</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: 10px auto;
+      width: 50%;
+
+    }
+
+    td,
+    th {
+      border-bottom: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <select name="gender" id="gender">
+    <option value="All">All</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+
+  <div id="result">
+
+  </div>
+
+</body>
+
+</html>
+<script>
+  let people = [
+    {
+      name: "Veli",
+      surname: "Korkmaz",
+      bday: 1977,
+      gender: "male",
+    },
+    {
+      name: "Zeynep",
+      surname: "Aydogmus",
+      bday: 1979,
+      gender: "female",
+    },
+    {
+      name: "Ali",
+      surname: "Candan",
+      bday: 1980,
+      gender: "male",
+    },
+    {
+      name: "Gulce",
+      surname: "Sari",
+      bday: 200,
+      gender: "female",
+    }
+  ];
+
+  function display(gender) {
+    out = `<table >
+           <tr><th>Name</th><th>Surname</th><th>Gender</td></tr>`;
+    $.each(people, function (key, person) {
+      if (gender == 'All' || person.gender == gender) {
+        out += `<tr>
+                  <td>${person.name}</td><td>${person.surname}</td><td>${person.gender}</td>
+                </tr>`;
+      }
+    });
+    out += '</table>';
+    return out;
+  }
+
+  $(function () {
+    $("#result").html(display("All"));
+
+    $("#gender").change(function () {
+      selectedGender = $("#gender").val();
+      res = display(selectedGender);
+      $("#result").html(res);
+    });
+
+    $("tr").hover(
+      function () {  //mouseover
+        console.log("moseover");
+        $(this).css("background-color", "grey");
+      }
+      ,
+      function () { //mouseout
+        console.log("moueout");
+        $(this).css("background-color", "white");
+      }
+    );
+  });
+</script>
