@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    //Function is an object in JavaScript
+    //There are 3 ways to define a function
+    
+    
+    // Define function first way:Function Definition
+    function inc(){
+      var num2=10; // local variable, its scope is valid during the exsecution of that function
+      counter++; // variable outside function can be used in function.
+
+    }
+    var counter=1;//global variable: a variable defined outside of any function. it is accessible from anywhere
+    inc();
+    document.write("Counter:",counter);
+    //document.write(num2); //ERROR: Num is not defined
+
+    //no need to write return type
+    function add(num1, num2){
+      return num1+num2;
+    }
+    var sum = add(5, 10);
+    document.write("<br>Sum is "+sum); 
+        
+    // Define function second way:Function Expression
+    var mul = function(num1, num2){ // mul is varaible. İt is type is object.
+      return num1*num2;
+    }
+    var result = mul(5,10);
+    document.write("<br>Multiply: is "+result); 
+
+
+     // Define function second way:Arrow Function
+    var sub = (num1, num2)=>{
+      var res = num1-num2;
+      return res;
+    }
+    var result = sub(5,10);
+    document.write("<br>Subtraction: is "+result); 
+
+    var div = (num1, num2) => num1 / num2; // shorthand notation
+    document.write("<br>Division: is "+div(10,2)); 
+
+    var oddNumbers = () => {
+      var i, j;
+      document.write("<br>Odd numbers"); 
+      for(i=1, j=1; i<20; i+=2, j++){
+        document.write("<br>"+j+": "+i);
+      }
+    }
+    oddNumbers();
+
+    var findeDouble = n1 => 2*n1;
+    document.write("<br>Double of 5: "+findeDouble(5));
+    
+  </script>
+</body>
+</html>

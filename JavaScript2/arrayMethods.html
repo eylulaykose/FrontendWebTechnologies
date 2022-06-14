@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Before implementing a function that process an array, check out predefined Array functions
+    fruits = ["Banana", "Orange", "Apple"];
+    fruits.sort();
+    console.log("After sort");
+    displayArray(fruits);
+
+    fruits.reverse();
+    console.log("After reverse");
+    displayArray(fruits);
+
+    fruits.pop(); // remove from end
+    console.log("After pop");
+    displayArray(fruits);
+
+    fruits.push("Kiwi");// add to the end
+    console.log("After push");
+    displayArray(fruits);
+    
+    fruits.shift();//remove the first element
+    console.log("After shift");
+    displayArray(fruits);
+
+    fruits.unshift("Lemon");//add it as a first element
+    console.log("After unshift");
+    displayArray(fruits);
+
+      
+    fruits.splice(2, 0, "Mango", "cherry");
+    //The first parameter (2) defines the position where new elements should be added
+    //The second parameter (0) defines how many elements should be removed.
+    console.log("After splice 1:");
+    displayArray(fruits);
+
+    fruits.splice(2, 2, "grape", "mellon");
+    console.log("After splice 2:");
+    displayArray(fruits);
+    
+    newFruits1 = fruits.slice(2);
+    newFruits2 = fruits.slice(2,4);
+
+    console.log("After slice 1: fruit array");    
+    displayArray(fruits);
+    console.log("After slice 2: newFruits1 array");
+    displayArray(newFruits1);
+    console.log("After slice 3: newFruits2 array");
+    displayArray(newFruits2);
+      
+    console.log("fruits.indexOf('Apple'): "+fruits.indexOf("Apple"));
+    console.log("fruits.indexOf('Banana'): "+fruits.indexOf("Banana"));
+    console.log("fruits.join(): "+fruits.join());
+    console.log("fruits.join(): "+fruits.join("*"));
+        
+
+    myGirls = ["Cecilie", "Lone"];
+    myBoys = ["Emil", "Tobias", "Linus"];
+    myChildren = myGirls.concat(myBoys);
+    console.log("After concat");
+    displayArray(myChildren);
+
+    points = [40, 100, 1, 5, 25, 10];
+    points.sort();    
+    displayArray(points);
+    //Chrome’s v8 uses merge sort, quick sort and insertion sort algoritm. Which algoritm depends on the browser type and to its version
+    //for quick sort: https://www.geeksforgeeks.org/quick-sort/
+    //for merge sort: https://www.geeksforgeeks.org/merge-sort/?ref=gcse
+    //for insertion sort: https://www.geeksforgeeks.org/insertion-sort/?ref=gcse
+    points = [40, 100, 1, 5, 25, 10];    
+    points.sort(function(a, b){return a - b});
+    displayArray(points);
+
+    text="";
+    fruits.forEach(myFunction);
+    console.log("After forEach: "+text);
+
+    numbers = [4, 9, 16, 25];
+    newArr1 = numbers.map(Math.sqrt);
+    newArr2 = numbers.map(multiplyWithTen);
+    console.log("After map numbers");
+    displayArray(numbers);
+    console.log("After map newArr1");
+    displayArray(newArr1);
+    console.log("After map newArr2");
+    displayArray(newArr2);
+
+    numbers = [1, 7, 3, 4, 5];    
+    var evenNumbers = numbers.find(e => e % 2 == 0);
+    console.log("After find: "+evenNumbers);
+    
+    ages = [32, 33, 16, 40];
+    result = ages.filter(checkAdult);
+    console.log("After filter");
+    displayArray(result);
+
+    function displayArray(arr){
+      for(element  of arr)
+        console.log(element+" ");
+    }
+    function myFunction(item, index) {
+        text += index + ": " + item + "\n"; 
+    }
+    function multiplyWithTen(num){
+      return num*10;
+    }
+    function checkAdult(age) {
+      return age >= 18;
+    }
+  </script>
+</body>
+</html>

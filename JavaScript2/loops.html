@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var i=1;
+    while(i<=10){
+      document.write(i+" ");
+      i++;
+    }
+    for(r=0; r<10; r++){
+      for(c=0; c<r; c++)
+      {
+        document.write("*");
+      }
+      document.write("<br />");
+    }
+      
+    do{
+      var userData = prompt("Enter a positive number","");
+      var num = parseInt(userData);
+      if(num > 0)
+        break;
+      alert(`Ooops ${userData} is not valsneseid positive number`);
+      //window.alert(`Ooops ${userData} is not valsneseid positive number`)
+    }while(num<=0 || isNaN(num));
+    document.write(`<h1>Positive number is ${num} </h1>`);
+
+
+10
+
+
+  </script>
+  
+</body>
+</html>

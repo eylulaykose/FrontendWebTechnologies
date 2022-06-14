@@ -1,0 +1,72 @@
+<script>
+  function showBar(no, height){
+    var res = `<div>
+          <div class='bar' style='height:${height}px'>${height}</div>
+          <div>${no}</div>
+          </div>`;
+    return res;    
+  }
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    h1{
+      text-align: center;
+      
+    }
+    div.barContainer{
+      width: 230px;      
+      background-color: #ddd;              
+      font-size: 0.8em;
+      padding: 10px;  
+      
+      display: flex;     
+      align-items: flex-end;
+      justify-content: center;
+      
+    }
+    .bar{
+      width: 25px;
+      background: linear-gradient(#FDD, #955, rgb(228, 17, 17), #000);
+      border: 1px solid #966;
+      margin-right: 10px;   
+      text-align: center;
+
+    }
+  </style>
+</head>
+<body>
+  <h1>Rollig dice 1000 times</h1>
+  <script>
+     var c1=0, c2=0, c3=0,c4=0, c5=0, c6=0;
+     for(var i=0; i<1000; i++){
+       var randomNumber = Math.floor(Math.random()*6+1);
+       switch(randomNumber){
+         case 1: c1++; break;
+         case 2: c2++; break;
+         case 3: c3++; break;
+         case 4: c4++; break;
+         case 5: c5++; break;
+         case 6: c6++; break;
+       }       
+     }
+    var res = showBar(1, c1);
+    var out=`
+          <div class='barContainer'>
+              ${showBar(1, c1)} ${showBar(2, c2)} ${showBar(3, c3)}
+              ${showBar(4, c4)} ${showBar(5, c5)} ${showBar(6, c6)}
+          </div>
+       `;
+    document.write(out);
+  </script>
+  
+</body>
+</html>
