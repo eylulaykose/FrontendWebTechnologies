@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var myVar = 5;
+
+    var example = function() {
+        console.info('Local:', myVar); //undefined, defined with var
+        var myVar = 10; //local
+        console.info('Local:', myVar); // 10
+        console.info('Outer:', this.myVar) //5
+    };
+    example();
+  </script>
+</body>
+</html>

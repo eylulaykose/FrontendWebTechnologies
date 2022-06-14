@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const PI = 3.141592653589793;
+      var foo = "foo1";
+      var foo = "foo"; // No problem, 'foo1' is replaced with 'foo'.
+
+      let bar = "bar"; 
+      //let bar = "bar2"; // SyntaxError: Identifier 'bar' has already been declared
+
+      function run() {  
+          const MAX=100;       
+          console.log("In function1:", foo, bar, PI, MAX); // undefined bar 3.14 100
+          console.log("In function2:", this.foo, bar, PI, MAX); // foo bar 3.14 100         
+          console.log("In function3:", window.foo, bar, PI, MAX); // foo bar 3.14 100         
+          {
+            var foo = "foo3";
+            let bar = "bar3";
+            
+            var moo = "Mooo"
+            let baz = "Bazz";
+            
+            console.log("In function4:", moo, baz); // Mooo Bazz
+            console.log("In function5:", foo, bar, PI, MAX); // foo3 bar3 3.14 100
+          }
+          console.log("In function6:", foo, bar, PI, MAX); // foo3 bar 3.14 100
+          console.log("In function7:", moo); // Mooo moo defined with var 
+          //console.log("In function8", baz); // ReferenceError, baz is undefined, bar is defined with let
+      }
+      console.log("Before function"); 
+      console.log(foo, bar); //foo      
+      //console.log(MAX); //MAX is not defined
+      run();
+      console.log("After function");
+      console.log(foo); //foo
+      console.log(bar); //bar
+      //console.log(MAX); // MAX is not defined
+      //console.log(moo); // moo is not defined
+      //console.log(baz); // baz is not defined
+  </script>
+  </body>
+</html>

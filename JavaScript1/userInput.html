@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 1. INPUT
+    // Take two numbers from the user
+    let num1 = parseFloat(prompt("Enter the first number", "0")) ; 
+    // num1 = parseFloat(num1) ;
+    let num2 = parseFloat(prompt("Enter the second number", "0")) ; 
+    // num2 = parseFloat(num2) ;
+
+    // 2. VALIDATE INPUT (make sure that inputs are in correct type/value/range)
+    if ( isNaN(num1) || isNaN(num2)) {
+        document.write("<p>Both values must be number</p>") ;
+    } else {
+        // 3. PROCESS
+        let sum = num1 + num2 ;
+
+        // 4. OUTPUT
+        document.write(`<h3>Sum of ${num1} and ${num2} is ${sum}</h3>`) ;
+    }
+   
+    </script>
+</body>
+</html>

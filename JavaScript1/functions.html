@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+
+     // 1. Function Definition
+     // add is a reference to function.
+     function add( a, b) {
+         var tmp = a + b ;
+         return tmp ;
+     }
+
+     console.log(add(5,4));  // function call/invoke
+
+     // 2. Function Expression
+     var sub = function(a,b) {
+         return a - b ;
+     }
+     console.log("Sub: "+sub(5,4));
+
+     // Function is an object which can be run.
+
+     // 3. Arrow Function
+     var mul = (a, b) => {
+         console.log("multiply") ;
+         return a * b ;
+     }
+     console.log("Mul: "+ mul(5,4));
+     
+     //var mul = (a,b) => a*b ;
+
+     var div = (a,b) => a/b ; 
+
+     function perform(fn, a, b) {
+         return fn(a,b) ;  // add(6,4)
+     }
+
+     console.log( perform(add, 6, 4)) ;
+     console.log( perform(sub, 6, 4)) ;
+     console.log( perform(mul, 6, 4)) ;
+     console.log( perform(div, 6, 4)) ;
+     console.log( perform( (a,b) => a ** b,  3, 4)) ;
+     console.log( perform( function (a,b) { return a ** b },  3, 4)) ;
+
+     // UI interactivity
+     // p.on("click", function() {   p.color = "white" }) ;
+
+     
+    // Scope of Variables: Global, Local variables.
+    // Global variable: the variables created outside of any function.
+    // Local variable: variables created within a function. (created temporarily)
+
+    var count = 5 ;   // global variable.
+    function incr() {
+        count++ ;  // can I access count variable within a function?? Yes...
+    }
+    incr() ;
+    console.log("Count : "+count); // 6
+
+    // Pass by value  (primitive types), reference (arrays and object)
+    var num1 = 6 ;
+    function double(x) {
+        x *= 2 ;
+    }
+    double(num1) ;
+    console.log(num1);  // ? : 6
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+    p span { color: blue; margin-left: 20px; font-weight: bold;}
+    </style>
+    </head>
+    <body>
+        <script>
+
+     // Variables:
+     // Types: Primitive, Reference variables
+     // Primitives: Number, String, Boolean
+     // Reference: Array, Object
+
+     var age = 12 ; // Number, 0xF5, 1.2e3
+     var cgpa = 3.14; // Number
+
+     var done = true ; // false
+
+     // C, java, C++, C#: strongly typed language
+     // javascript, php, python : loosely typed language
+
+     // Unicode charset,
+     // Javascript uses UTF-16 encoding for unicode charset.
+     // Each symbol takes two bytes called "code unit".
+     var text = "This is an introduction" ; // or single quote
+     var course = 'CTIS255 - Web Technologies 1' ;
+     // template string: ${expression} injected into string
+     var out = "Carl Sagan's cgpa is "+cgpa+" in the university" ;
+     console.log(out) ;
+
+     var out = 'Carl Sagan\'s cgpa is '+cgpa+' in the university';
+     console.log(out) ;
+     
+     var out = `Carl Sagan's cgpa is ${cgpa} in the university` ;
+     console.log(out) ;
+     
+     // String Processing
+     // String is immutable (cannot change)
+     console.log("course.length: "+course.length) ; // Number of characters.
+     console.log("course.charAt(2) :"+course.charAt(2)) ; // Third character
+     console.log("course.charCodeAt(2) :"+course.charCodeAt(2)) ; // Third character
+     console.log("course.substr(4,3): "+course.substr(4,3)) ; // Starting from index 4, take out 3 characters: 255
+     console.log("course.substr(4): "+course.substr(4)) ; // Starting from index 4, take out 3 characters: 255
+     console.log("course.indexOf('Web'): "+course.indexOf("Web")) ; // Search "Web", and return its index value, -1 if not found.
+     console.log("course.indexOf('java'): "+course.indexOf("java")) ; // Search "java", and return its index value, -1 if not found.
+     console.log("course.lastIndexOf('log'): "+course.lastIndexOf("log")) ; // Search "java", and return its index value, -1 if not found.
+     console.log("course.toUpperCase(): "+course.toUpperCase()) ; // convert all characters to uppercase
+     console.log("course.toUpperCase(): "+course.toUpperCase()) ; // convert all characters to lowercase
+     console.log("course.trim(): "+course.trim()) ; // remove the whitespaces from the both ends of the string
+     var arr = course.split(" "); //splits a string using the separator into an array of substrings
+     console.log("course.split(): "+arr[0]); 
+     console.log("arr.length: "+arr.length);      
+     console.log("String.fromCharCode(73): "+String.fromCharCode(73));      
+     console.log("String.fromCharCode(heartCode): "+String.fromCharCode(0x2665)); 
+
+
+     // Arithmetic expression (variables, literals and arith. operators) returns Number
+     // Arithmetic Operators: 
+     // Binary operators : +,-,*,/,%, **, |, &, ^
+     // Unary operators: ++, --
+     var sum = (age + 5) % 3 ; // arithmetic expression
+
+     // +: 1) addition 2)concatenation
+     // old way
+     var res = "<p>The age of the person is " + age + "</p>"; 
+     // newer way to insert the value of an expression/variable
+     var resNew = `<p>The age of the person is ${age}</p>` ;
+     console.log(resNew) ;
+
+     // assignments : =, +=, *=, /=, %=, -/
+     age += 5 ; 
+
+     // logical expressions: Boolean
+     // relational operators: binary operators : == (equal), === (identical), >, <, >=, <=
+     // != (not equal), !== (not identical)
+     // logical operators: &&, ||, ^^, ! (unary operator)
+     console.log( age == "17") ; // true, not recommended 
+     console.log( age === "17") ; // false, use this one.
+     // ternary operator:  logical expr ? true : false
+     console.log( age < 20 && age > 12 ? "Teenage" : "Child or mature") ;
+     // logical expr: age < 20 && age > 12
+     // true: "Teenage"
+     // false : "Child or mature"
+
+     // Type Conversion
+     // String to Number
+     var num1 = parseInt("13.234") ; // 13     
+     var num2 = parseFloat("13.234") ; // 13.234
+     var num3 = parseFloat("  13px  ") ; // 13
+     var num4 = parseFloat( "this is 13px") ; // NaN = Not-a-Number
+     console.log(num4);
+     console.log( isNaN(num4)) ; // true  num4 === NaN 
+     console.log("parseInt('13apples14'):"+parseInt("13apples14")); // 13
+     console.log("parseInt('1001',2):"+parseInt("1001",2)); //9
+     console.log("parseInt('0x3F',16):"+parseInt("0x3F",16)); //9
+     
+    let num = 5.56789;
+    console.log( "num.toFixed(): "+num.toFixed()); //shows the number of digits after decimal point
+    console.log( "num.toFixed(1): "+num.toFixed(1));
+    console.log( "num.toFixed(10): "+num.toFixed(10));
+
+    num=213.45689;
+    console.log( "num.toPrecision(4): "+num.toPrecision(4));// alocates number of digits as in the parameter
+    console.log( "num.toPrecision(5): "+num.toPrecision(5));
+    
+    num=17;
+    console.log( "num.toString(): "+num.toString()); //17
+    console.log( "num.toString(2): "+num.toString(2));  //10001
+    console.log( "num.toString(16): "+num.toString(16)); //0x11
+
+     // Adding html element into the page with javascript
+     document.write("<h1>Introduction to Javascript Coding</h1>");
+     document.write("<p>The age is <span>" + age + "</span></p>") ;
+     // ES6: template string
+     document.write(`<p>The age of the person is ${age}</p>`);
+     document.write(`<p>Arithmetic Expressin in templage string :  ${2*age + 5}</p>`);
+     document.write("\u222e \u3091 \u0409 \u0633 \u265e")  ;
+    </script>
+    </body>
+</html>

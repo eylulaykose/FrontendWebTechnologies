@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      table { border-collapse: collapse; margin: 30px auto;}
+      td { text-align: center; padding: 15px; border:1px solid #666;}
+      .big { color: red}
+      .small { color: blue ;}
+    </style>
+</head>
+<body>
+    <script>
+    // 1. Get two numbers.
+    var num1 = prompt("Enter the first one :") ;
+    var num2 = prompt("Enter the second one :") ;
+
+    // convert to number format/type
+    num1 = parseFloat(num1) ; 
+    num2 = parseFloat(num2) ;
+
+    // Validate user input, check if they are Number
+    if ( isNaN(num1) || isNaN(num2)) {
+        document.write("<p>Both input must be Number</p>") ; 
+    } else {
+        // 2. Find the bigger and smaller numbers
+        var big = num1 >= num2 ? num1 : num2 ; // shorthand notation for if/else stmt
+        var small = num1 <= num2 ? num1 : num2 ;
+
+        // 3. Output
+        document.write(`
+        <table>
+            <tr><td colspan="2">ORDER</td></tr>
+            <tr><td>1.</td><td class="big">${big}</td></tr>
+            <tr><td>2.</td><td class="small">${small}</td></tr>
+        </table>
+        `) ;
+    }
+    </script>
+</body>
+</html>
