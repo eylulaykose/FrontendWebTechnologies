@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table{ border-collapse: collapse; margin: 0 auto; }
+    td, th{ border: 1px solid black; padding: 10px;}
+    #num{ background-color: black; color:white}
+    tr:last-of-type{ text-align: center;}
+    h2,  #tdWithButton, div#res{ text-align: center;}   
+    span{color: green; font-weight: bold;}
+    
+  </style>  
+</head>
+<body>
+  <form action="">
+    <h2>Ticket Form</h2>
+    <table>
+      <tr>
+        <td>Name</td>
+        <td><input type="text" name="uname" id="uname"></td>
+      </tr>
+      <tr>
+        <td>Destination</td>
+        <td>
+          <select name="destination" id="destination">
+              <option value="ank">Ankara</option>
+              <option value="mun">Munich</option>
+              <option value="york">New York</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Business Class</td>
+        <td><input type="checkbox" name="business" id="business"></td>
+      </tr>
+      <tr>
+        <td>Luggage Weight</td>
+        <td><input type="text" name="luggage" id="luggage"></td>
+      </tr>
+      <tr>
+        <td colspan="2" id="tdWithButton">
+          <input type="button" value="Calculate" id="btnCalculate" name="btCalculate" onclick="calculate()">
+        </td>      
+      </tr>
+      <tr>
+        <td colspan="2"><textarea name="result" id="result" cols="30" rows="10"></textarea></td>        
+      </tr>
+    </table>
+  </form>
+  <div id="res">
+
+  </div>
+  
+</body>
+</html>

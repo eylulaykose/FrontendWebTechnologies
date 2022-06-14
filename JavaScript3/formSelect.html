@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>   
+    <select id="framework" multiple>
+      <option value="1">Angular</option>
+      <option value="2">React</option>
+      <option value="3">Vue.js</option>
+      <option value="4">Ember.js</option>
+  </select>
+   
+  <input type="button" name="btnDisplay" id="btnDisplay" value="Display" onclick="display()">
+  </form>
+</body>
+<div id="formValues">
+
+</div>
+</html>
+<script>
+  function display(){
+    divWithFormValuesId = document.querySelector("#formValues");   
+    selectWithFrameworkId = document.querySelector('#framework');
+    selected=[];
+    resultValue ="";
+    resultText ="";
+    for (var option of selectWithFrameworkId.options)
+    {
+        if (option.selected) {
+            selected.push(option.value);
+            resultValue += option.value+"<br>";
+            resultText +=option.text+"<br>";
+        }
+    }        
+    divWithFormValuesId.innerHTML= resultValue+" <br>"+resultText;
+  }
+ 
+</script>

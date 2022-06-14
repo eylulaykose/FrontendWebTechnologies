@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <label for="accept">
+      <input type="checkbox" id="accept" name="accept" value="yes">  Accept 
+   </label>   
+   <!--
+   <input type="checkbox" id="accept" name="accept" value="yes">  
+   <label for="accept"> Accept </label>
+   -->
+   <p>Select your favorite colors:</p>
+    <label for="c1"> <input type="checkbox" name="color" value="red" id="c1">Red</label>
+    <label for="c2"><input type="checkbox" name="color" value="green" id="c2"> Green</label>
+    <label for="c3"><input type="checkbox" name="color" value="blue" id="c3">Blue</label>
+    <button onclick="checkAll(); return false;">Check All</button>
+    <p>    
+   <input type="button" name="btnDisplay" id="btnDisplay" value="Display" onclick="display()">
+
+  </form>
+</body>
+<div id="formValues">
+
+</div>
+</html>
+<script>
+  var checkedorNot = false;
+  function display(){   
+    divWithFormValuesId = document.querySelector("#formValues");
+    var result="";
+    if(document.getElementById("accept").checked)
+      result += "Accepted "+document.getElementById("accept").value+"<br>";
+    else
+      result +="NOT accepted <br>";
+
+    checkboxes = document.querySelectorAll('input[name="color"]:checked');
+    values = [];
+    checkboxes.forEach((checkbox) =>values.push(checkbox.value));
+    result += values.join();   
+
+    divWithFormValuesId.innerHTML= result ;
+  }
+  function checkAll(){
+    checkboxes = document.querySelectorAll('input[name="color"]');
+    if(checkedorNot)      
+      checkboxes.forEach((checkbox)=>checkbox.checked=false);
+    else
+      checkboxes.forEach((checkbox)=>checkbox.checked=true);
+    
+    checkedorNot =!checkedorNot;
+  }
+</script>

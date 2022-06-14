@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .btn{
+      width: 100px;
+      background-color: orange;
+      margin-bottom: 20px;
+      border: 1px solid black;
+      text-align: center;
+      padding: 5px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="btn" onclick="addTask()">Add Task</div>  
+  <input type="text" id="task">
+  <br>
+  <div >
+    <ul id="tasks">
+      <li>item</li>
+    </ul>
+  </div>
+</body>
+</html>
+<script> 
+  function addTask(){
+    ulWithTasksId = document.querySelector("#tasks");
+    textBoxWithtaskId = document.getElementById("task");
+    ulWithTasksId.innerHTML += "<li onClick='removeCurentItem(this)'>"+textBoxWithtaskId.value+"</li>";    
+  } 
+  function removeCurentItem(listItem){
+    var itemContent = listItem.innerHTML;
+    listItem.remove();
+    alert("item "+itemContent+" is removed");
+  }
+</script>

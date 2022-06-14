@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>   
+    <p>Select your size:</p>
+  
+        <input type="radio" name="size" value="XS" id="xs">
+        <label for="xs">XS</label>
+        <input type="radio" name="size" value="S" id="s">
+        <label for="s">S</label>
+        <input type="radio" name="size" value="M" id="m">
+        <label for="m">M</label>
+        <input type="radio" name="size" value="L" id="l">
+        <label for="l">L</label>
+        <input type="radio" name="size" value="XL" id="xl">
+        <label for="xl">XL</label>
+   
+        <input type="button" name="btnDisplay" id="btnDisplay" value="Display" onclick="display()">
+  </form>
+</body>
+<div id="formValues">
+
+</div>
+</html>
+<script>
+  function display(){
+    divWithFormValuesId = document.querySelector("#formValues");
+   
+    var selectedRadioButton= document.querySelector("input[name='size']:checked");
+    
+    divWithFormValuesId.innerHTML= selectedRadioButton.value;
+  }
+ 
+</script>

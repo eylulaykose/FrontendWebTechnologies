@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table{ border-collapse: collapse;  }
+    td, th{ border: 1px solid black; padding: 10px;}
+    #num{ background-color: black; color:white}
+    tr:last-of-type{ text-align: center;}
+  </style>
+</head>
+<body>
+  <form name="sqrForm">
+    <table>
+      <tr>
+        <th>SQUARE BOX</th>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" name="num" id="num">
+          <input type="button" value="SQUARE1" onclick="takeSQR1()">
+          <input type="button" value="SQUARE2" onclick="takeSQR2()">
+        </td>
+      </tr>
+      <tr>
+        <td><textarea name="result" id="result" cols="40" rows="10"></textarea></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
+<script>
+  function takeSQR1(){
+    num = parseInt(sqrForm.num.value);
+    sqr = num * num;
+    sqrForm.result.value +=num+" x "+num+" = "+sqr+"\n";
+
+  }
+  function takeSQR2(){
+    tbNum = document.getElementById("num");
+    taResult = document.getElementById("result");
+
+    num = parseInt(tbNum.value);
+    sqr = num * num;
+    taResult.value +=num+" x "+num+" = "+sqr+"\n";
+  }
+</script>
