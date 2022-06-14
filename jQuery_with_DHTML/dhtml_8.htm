@@ -1,0 +1,43 @@
+<!--
+DHML
+Level 2
+Purpose : Rollover button.
+-->
+<html>
+
+<head>
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+  <title>Mouse Handling</title>
+
+  <title>Rollover button</title>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td><img src="images/ctis255_off.jpg" id="ctis255" />
+      </td>
+    </tr>
+    <tr>
+      <td><img src="images/ctis404_off.jpg" id="ctis404" />
+      </td>
+    </tr>
+    <tr>
+      <td><img src="images/ctis456_off.jpg" id="ctis456" />
+      </td>
+    </tr>
+
+  </table>
+
+</body>
+
+</html>
+<script>
+
+  $(function () {
+    $("img").hover(
+      function () { $(this).attr("src", "images/" + $(this).attr("id") + "_on.jpg") },
+      function () { $(this).attr("src", "images/" + $(this).attr("id") + "_off.jpg") }
+    );
+  });
+</script>

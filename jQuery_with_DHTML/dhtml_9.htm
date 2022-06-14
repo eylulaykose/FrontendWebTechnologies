@@ -1,0 +1,118 @@
+<!--
+DHTML
+Level 2
+Purpose : Dynamic Font Effects
+-->
+
+<html>
+
+<head>
+	<script src="scripts/jquery-3.6.0.min.js"></script>
+
+	<title>Font Effects</title>
+	<style type="text/css">
+		td {
+			font-family: arial;
+			font-size: 12pt;
+		}
+
+		.incdec {
+			height: 18px;
+			font-size: 6px
+		}
+	</style>
+</head>
+
+<body>
+
+	<table style="background-color:gray; width:100" class="clr">
+		<tr>
+			<td colspan="2">Font Color</td>
+		</tr>
+
+		<tr>
+			<td style="height:10;background-color:red"></td>
+			<td style="height:10;background-color:green"></td>
+		</tr>
+
+		<tr>
+			<td style="height:10;background-color:blue"></td>
+			<td style="height:10;background-color:yellow"></td>
+		</tr>
+	</table>
+	<br>
+	<table style="background-color:gray; width:80" class="size">
+		<tr>
+			<td colspan="2">Font Size</td>
+		</tr>
+		<tr>
+			<td><input type="button" value="+" class="incdec" id="btnInc" />
+			</td>
+			<td rowspan="2"><input id="sizeBox" type="text" size="2" value="12" /></td>
+		</tr>
+
+		<tr>
+			<td><input type="button" value="-" class="incdec" id="btnDec" onclick="sizeBox.value= parseInt(sizeBox.value)-1 ;
+						para.style.fontSize=sizeBox.value+'px'" />
+			</td>
+		</tr>
+
+	</table>
+
+	<br>
+	<table style="background-color:gray;" class="font">
+		<tr>
+			<td>Font Family</td>
+		</tr>
+		<tr>
+			<td style="font-size:8pt">Verdana</td>
+		</tr>
+		<tr>
+			<td onClick="para.style.fontFamily='tahoma'" style="font-size:8pt">Tahoma</td>
+		</tr>
+		<tr>
+			<td onClick="para.style.fontFamily='arial'" style="font-size:8pt">Arial</td>
+		</tr>
+		<tr>
+			<td onClick="para.style.fontFamily='times'" style="font-size:8pt">Times Roman</td>
+		</tr>
+	</table>
+	<p id="para" style="position:absolute; left:300; top :100 ; font-size:12">
+		This is the Text to Test!!!</p>
+</body>
+
+</html>
+<script>
+	$(function () {
+		$("table.clr td").click(function () {
+			$(document.body).css("color", $(this).css("background-color"));
+		});
+
+		$("table.font td").hover(
+			function () {
+				$(this).css("background-color", 'white');
+			},
+			function () {
+				$(this).css("background-color", 'gray');
+			});
+
+		$("table.font td").click(function () {
+			$("#para").css("font-family", $(this).text());
+		});
+
+		$("table.font td").click(function () {
+			$("#para").css("font-family", $(this).text());
+		});
+
+		$("#btnInc").click(function () {
+			csize = parseInt($("#para").css("font-size")) + 1;
+			$("#sizeBox").val(csize);
+			$("#para").css("font-size", csize);
+		});
+		$("#btnDec").click(function () {
+			csize = parseInt($("#para").css("font-size")) - 1;
+			$("#sizeBox").val(csize);
+			$("#para").css("font-size", csize);
+		});
+	});
+</script>

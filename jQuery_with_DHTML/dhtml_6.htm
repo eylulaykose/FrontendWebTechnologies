@@ -1,0 +1,57 @@
+<!--
+DHML
+Level 1
+Purpose : Mouse handling
+-->
+<html>
+
+<head>
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <title>Mouse Handling</title>
+
+    <style type="text/css">
+        .pos {
+            position: absolute;
+            top: 100;
+            left: 100
+        }
+    </style>
+
+    <script type="text/javascript">
+
+    </script>
+
+</head>
+
+<body>
+    <p id="mousePosition"></p>
+
+    <p id="buttonClick"></p>
+
+    <img src="images/mouse.gif" id="mouse" class="pos" />
+
+</body>
+
+</html>
+<script type="text/javascript">
+
+
+    $(function () {
+
+
+        $(document).click(Click);
+        $(document).mousemove(Coordinate);
+        var counter = 0;
+
+        function Click() {
+            counter++;
+            $("#buttonClick").text(counter + "  times Clicked!");
+        }
+
+        function Coordinate() {
+            $("#mouse").css("left", event.clientX);
+            $("#mouse").css("top", event.clientY);
+            $("#mousePosition").html($("#mouse").css("left") + " , " + $("#mouse").css("top"));
+        }
+    });
+</script>

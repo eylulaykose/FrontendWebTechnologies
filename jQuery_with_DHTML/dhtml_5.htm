@@ -1,0 +1,63 @@
+<!--
+
+DHML
+Level 1
+Purpose : Onclick event for table
+
+-->
+
+<html>
+
+<head>
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+  <title>Background Color</title>
+</head>
+
+<body>
+
+  <table style="background-color:white">
+
+    <tr>
+      <td>Choose Color</td>
+    </tr>
+
+    <tr>
+      <td style="background-color:red;height:20"></td>
+    </tr>
+
+    <tr>
+      <td style="background-color:green;height:20"></td>
+    </tr>
+
+    <tr>
+      <td style="background-color:blue;height:20"></td>
+    </tr>
+
+  </table>
+
+
+</body>
+
+</html>
+
+<script>
+  $(function () {
+    /*
+    $("td").mouseover(function () {
+      $(document.body).css("background-color", $(this).css("background-color"));
+    });
+    $("td").mouseout(function () {
+      $(document.body).css("background-color", "white");
+    });
+ */
+    $("td").hover(
+      function () {
+        $(document.body).css("background-color", $(this).css("background-color"));
+      }
+      ,
+      function () {
+        $(document.body).css("background-color", "white");
+      }
+    );
+  });
+</script>

@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+  <style type="text/css">
+    body {
+      background-color: black;
+      font-family: arial;
+      color: #45acf6;
+      font-size: 10pt;
+    }
+
+    #humanHead {
+      position: absolute;
+      visibility: hidden;
+      top: 87;
+      left: 142;
+    }
+
+    #orcHead {
+      position: absolute;
+      visibility: hidden;
+      top: 14;
+      left: 74
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <img id="mainImage" src="images/orcandhumans.gif">
+
+  Select <a href="#" id="imgHuman" onmouseover="Visible(1)" onmouseout="">Human</a> and
+  <a href="#" id="imgOrc" onmouseover="Visible(2)" onmouseout="Visible(0)">Orc</a>
+</body>
+
+</html>
+<script>
+  //preload images
+  var myIm = new Array(3);
+  myIm[0] = "images/orcandhumans.gif";
+  myIm[1] = "images/orcandhumans-human.jpg";
+  myIm[2] = "images/orcandhumans-orc.jpg";
+
+  function Visible(bg) {
+    $("#mainImage").attr("src", myIm[bg]);
+  }
+  $(function () {
+    $("a#imgHuman").hover(
+      function () {
+        visible(1);
+      }, function () {
+        visible(0)
+      });
+    $("a#imgOrc").hover(
+      function () {
+        visible(2);
+      }, function () {
+        visible(0)
+      });
+  });
+</script>

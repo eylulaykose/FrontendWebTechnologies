@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="dd" style="position:absolute; left:100; top:100;border-style:solid;border-width:2">
+        <table border="2">
+            <tr>
+                <td>denem1</td>
+            </tr>
+
+            <tr>
+                <td>denem2</td>
+            </tr>
+            <tr>
+                <td>denem3</td>
+            </tr>
+            <tr>
+                <td>denem4</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <input type="button" value="Clip Table">
+
+</body>
+
+</html>
+<script>
+
+    $(function () {
+        $("input:button").click(function () {
+            $("#dd").css("clip", 'rect(0px,50px,50px,0px)');
+
+        });
+    });
+</script>

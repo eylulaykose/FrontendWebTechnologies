@@ -1,0 +1,36 @@
+<html>
+
+<head>
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+  <title>Dhtml - example 3</title>
+
+</head>
+
+<body>
+
+  <input type="button" value="Down" onClick="mouse.style.top= parseInt(mouse.style.top) + 20 " />
+  <input type="button" value="Up" onClick="mouse.style.top= parseInt(mouse.style.top) - 20 " />
+  <input type="button" value="Left" onClick="mouse.style.left= parseInt(mouse.style.left) - 20 " />
+  <input type="button" value="Right" onClick="mouse.style.left= parseInt(mouse.style.left) + 20 " />
+  <img id="mouse" src="images/mouse.gif" style="position:absolute;top:100;left:100" />
+
+</body>
+
+</html>
+
+<script>
+  $(function () {
+    $(":button").click(function () {
+      os = $("#mouse").offset();
+      if ($(this).val() == "Down")
+        os.top += 10;
+      else if ($(this).val() == "Up")
+        os.top -= 10;
+      else if ($(this).val() == "Left")
+        os.left += 10;
+      else if ($(this).val() == "Right")
+        os.left -= 10;
+      $("#mouse").offset(os); s
+    });
+  });
+</script>

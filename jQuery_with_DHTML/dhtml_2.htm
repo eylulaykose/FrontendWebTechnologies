@@ -1,0 +1,38 @@
+<html>
+
+<head>
+   <script src="scripts/jquery-3.6.0.min.js"></script>
+   <title>Dhtml - example 2</title>
+
+</head>
+
+<body>
+
+   <input type="button" value="RED" />
+   <input type="button" value="GREEN" onClick="document.body.style.backgroundColor='green'" />
+   <input type="button" value="BLUE" onClick="document.body.style.backgroundColor='blue'" />
+
+</body>
+
+</html>
+<script>
+   $(function () {
+      /*
+      $("[value='RED']").click(function () {
+         $(
+            document.body).css("background-color", "red");
+      });
+      */
+
+      $("input:button").click(function () {
+         $(document.body).css("background-color", $(this).val());
+         /*
+         if ($(this).val() == 'GREEN')
+            $(document.body).css("background-color", "green");
+         else if ($(this).value == 'BLUE')
+            $(document.body).css("background-color", "blue");
+         */
+
+      });
+   });
+</script>

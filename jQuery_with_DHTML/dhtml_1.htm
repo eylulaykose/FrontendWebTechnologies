@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <title>Dhtml - example 1</title>
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+
+  <p id="pText">Welcome to DHTML</p>
+
+  <script type="text/javascript">
+    $(function () {
+      window.alert("GO ON");
+      $("#pText").css("color", "red");
+      $("#pText").css({ "background-color": "black", "font-size": "20pt" });
+      $("#pText").html("Hello");
+    });
+  </script>
+
+</body>
+
+</html>
